@@ -810,7 +810,7 @@ footer.entry-meta .meta-in {
   padding-bottom: 45%;
 }
 
-embed {
+.video-embed {
   position: absolute;
   margin: 0 auto;
   top: 0;
