@@ -130,6 +130,7 @@
         <div class="hidden md:flex items-center space-x-8">
           <a href="#about" class="nav-link text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">About</a>
           <a href="#experience" class="nav-link text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Experience</a>
+          <a href="#projects" class="nav-link text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Projects</a>
           <a href="#publications" class="nav-link text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Publications</a>
           <a href="#news" class="nav-link text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">News</a>
           <a href="#contact" class="nav-link text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Contact</a>
@@ -159,6 +160,7 @@
       <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
         <a href="#about" class="nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">About</a>
         <a href="#experience" class="nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Experience</a>
+        <a href="#projects" class="nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Projects</a>
         <a href="#publications" class="nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Publications</a>
         <a href="#news" class="nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">News</a>
         <a href="#contact" class="nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Contact</a>
@@ -192,17 +194,26 @@
       <!-- Name & Title -->
       <div class="reveal">
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4">
-          Pantelis <span class="text-gradient">Tzamalis</span>
+          Pantelis <span class="text-gradient">Tzamalis</span><span class="text-slate-400 dark:text-slate-500">,</span>
+          <span class="text-gradient">Ph.D.</span>
         </h1>
-        <p class="text-lg sm:text-xl font-medium text-slate-500 dark:text-slate-400 mb-2">
-          Ph.D. &middot; AI & System Architect &middot; CTO
+        <p class="text-lg sm:text-xl font-medium text-slate-500 dark:text-slate-400 mb-3">
+          Post-Doctoral Researcher &middot; Chief Technology Officer (CTO) &middot; AI & System Architect
         </p>
-        <p class="text-base text-slate-500 dark:text-slate-400 mb-1">
-          Head of the Artificial Intelligence of Things Group
-        </p>
-        <p class="text-sm text-slate-400 dark:text-slate-500 italic">
-          University of Patras &middot; Computer Technology Institute (CTI), Patras, GR
-        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-x-6 gap-y-1 text-sm text-slate-400 dark:text-slate-500">
+          <span class="flex items-center gap-1.5">
+            <i class="fa-solid fa-flask text-brand-500/70 text-xs"></i>
+            AIoT Group Leader, IoT Lab &middot; University of Patras, GR
+          </span>
+          <span class="flex items-center gap-1.5">
+            <i class="fa-solid fa-building text-brand-500/70 text-xs"></i>
+            CTO &middot; Iassis Medical Group
+          </span>
+          <span class="flex items-center gap-1.5">
+            <i class="fa-solid fa-chalkboard-user text-brand-500/70 text-xs"></i>
+            Guest Lecturer &middot; Neapolis University, CY
+          </span>
+        </div>
       </div>
 
       <!-- CTA Buttons -->
@@ -215,14 +226,20 @@
            class="inline-flex items-center gap-2 px-6 py-3 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-sm font-semibold rounded-lg transition-all">
           <i class="ai ai-google-scholar"></i> Google Scholar
         </a>
+        <a href="https://dblp.uni-trier.de/pers/hd/t/Tzamalis:Pantelis" target="_blank"
+           class="inline-flex items-center gap-2 px-6 py-3 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-sm font-semibold rounded-lg transition-all">
+          <i class="ai ai-dblp"></i> DBLP
+        </a>
       </div>
 
       <!-- Social Links -->
       <div class="mt-8 flex items-center justify-center gap-5 reveal">
-        <a href="https://github.com/tzamalisp" target="_blank" aria-label="GitHub"
-           class="text-slate-400 hover:text-slate-700 dark:hover:text-white text-xl transition-colors"><i class="fa-brands fa-github"></i></a>
         <a href="https://www.linkedin.com/in/pantelis-tzamalis/" target="_blank" aria-label="LinkedIn"
            class="text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 text-xl transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/tzamalisp" target="_blank" aria-label="GitHub"
+           class="text-slate-400 hover:text-slate-700 dark:hover:text-white text-xl transition-colors"><i class="fa-brands fa-github"></i></a>
+        <a href="https://github.com/AIoT-Group-UoP" target="_blank" aria-label="AIoT Group GitHub"
+           class="text-slate-400 hover:text-slate-700 dark:hover:text-white text-xl transition-colors" title="AIoT Group @ UoP"><i class="fa-solid fa-users"></i></a>
         <a href="https://scholar.google.gr/citations?user=zo_G-TIAAAAJ&hl=en" target="_blank" aria-label="Google Scholar"
            class="text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 text-xl transition-colors"><i class="ai ai-google-scholar"></i></a>
         <a href="https://www.researchgate.net/profile/Pantelis-Tzamalis" target="_blank" aria-label="ResearchGate"
@@ -248,24 +265,38 @@
         <!-- Bio (3 cols) -->
         <div class="lg:col-span-3 space-y-5 text-slate-600 dark:text-slate-300 leading-relaxed text-justify reveal">
           <p>
-            Pantelis Tzamalis received his <strong class="text-slate-800 dark:text-slate-100">Ph.D.</strong> at the University of Patras,
-            focusing on the <strong class="text-slate-800 dark:text-slate-100">Artificial Intelligence of Things</strong> domain. His doctoral work
-            developed an innovative set of mechanisms and platforms composed of Human Activity & Gesture Recognition,
-            Trustworthy AI, Explainable AI, Crowdsensing, and Text Mining applications for passive, automated, and effective
-            detection, evaluation, and monitoring of Allergic Rhinitis at spatiotemporal and individual scale.
+            Pantelis Tzamalis received his <strong class="text-slate-800 dark:text-slate-100">Ph.D. in Computer Science</strong> from the
+            Computer Engineering and Informatics Department of the University of Patras (2022), with a thesis on
+            <em>"Allergic Rhinitis Passive Detection, Assessment, and Monitoring using Artificial Intelligence of Things
+            (AIoT) and Crowdsensing"</em>. His doctoral work produced an innovative set of mechanisms and platforms
+            integrating Human Activity & Gesture Recognition, Trustworthy AI, Explainable AI, Crowdsensing, and
+            Text Mining for passive, automated health monitoring at spatiotemporal and individual scale.
           </p>
           <p>
-            He also received his <strong class="text-slate-800 dark:text-slate-100">M.Sc.</strong> in the Division of Application and Foundation
-            of Computer Science and Technology (2018), and his <strong class="text-slate-800 dark:text-slate-100">Diploma in Computer Science</strong>
-            (2014) from the Computer Engineering and Informatics Department, University of Patras, Greece.
+            He also holds an <strong class="text-slate-800 dark:text-slate-100">M.Sc.</strong> in the Division of Application and
+            Foundation of Computer Science and Technology (2018) and a <strong class="text-slate-800 dark:text-slate-100">Diploma
+            (B.Sc.) in Computer Science</strong> (2014), both from the University of Patras.
           </p>
           <p>
-            He has worked for <strong class="text-slate-800 dark:text-slate-100">Google</strong> in the context of Google Summer of Code 2019 and 2020,
-            developing open-source software for Machine Learning infrastructure in collaboration with JBoss (Red Hat) and MetaBrainz.
+            Currently, he serves as a <strong class="text-slate-800 dark:text-slate-100">Post-Doctoral Researcher</strong> and
+            <strong class="text-slate-800 dark:text-slate-100">AIoT Group Leader</strong> at the Internet of Things Laboratory (IoT-Lab)
+            of the University of Patras, the <strong class="text-slate-800 dark:text-slate-100">Chief Technology Officer (CTO)</strong>
+            of Iassis Medical Group, and a <strong class="text-slate-800 dark:text-slate-100">Guest Lecturer</strong> at the Department
+            of Computer Science, Neapolis University, Paphos, Cyprus. He is also a Senior Researcher at the Computer
+            Technology Institute and Press "Diophantus".
           </p>
           <p>
-            His publications span international conference proceedings and journals, and he serves as a reviewer for various
-            international conferences and scientific journals.
+            Throughout his career, he has served as a technical manager, tech lead, research engineer, and AI architect
+            across multiple EU-funded (Horizon Europe SynAirG, H2020 SAINT, H2020 Privacy Flag) and industry-funded
+            projects, including direct contracts with <strong class="text-slate-800 dark:text-slate-100">Pfizer CDI</strong> for
+            Voice-Based Diagnostics and EyeAI. He has also contracted with
+            <strong class="text-slate-800 dark:text-slate-100">Google LLC</strong> (Summer of Code 2019 & 2020) for the development
+            of open-source ML infrastructure with JBoss (Red Hat) and MetaBrainz.
+          </p>
+          <p>
+            He has authored publications in international conference proceedings and journals (IEEE, Springer Nature),
+            serves as a reviewer for various scientific venues, and has delivered keynote talks at the ITU (United Nations),
+            the EU IDEAL Cluster Annual Meeting, and the Panhellenic Congress of Allergology & Clinical Immunology.
           </p>
         </div>
 
@@ -273,20 +304,20 @@
         <div class="lg:col-span-2 reveal">
           <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-4">Research Interests & Expertise</h3>
           <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Artificial Intelligence</span>
-            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Machine Learning</span>
-            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Deep Learning</span>
-            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Internet of Things</span>
-            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Healthcare 5.0</span>
-            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Digital Healthcare</span>
-            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Gesture Recognition</span>
-            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Human Activity Recognition</span>
-            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Audio Analysis</span>
-            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Voice-based Diagnostics</span>
-            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Text Mining</span>
-            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Crowdsensing</span>
+            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Artificial Intelligence of Things (AIoT)</span>
+            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Time Series Analytics</span>
+            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Digital Health (Healthcare 5.0)</span>
             <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Explainable AI</span>
-            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Signal Processing</span>
+            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Trustworthy AI</span>
+            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Causation AI & Causal ML</span>
+            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Neural Network Design & Deployment</span>
+            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Human Activity & Gesture Recognition</span>
+            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Audio Analysis & Voice Diagnostics</span>
+            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Digital Signal Processing</span>
+            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Crowdsensing & Crowdsourcing</span>
+            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Big Data Analytics</span>
+            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">MLOps</span>
+            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Systems Design at Scale</span>
           </div>
         </div>
       </div>
@@ -299,94 +330,280 @@
   <section id="experience" class="py-24">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
-      <div class="text-center mb-16 reveal">
+      <div class="text-center mb-12 reveal">
         <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Career <span class="text-gradient">Timeline</span></h2>
         <div class="mt-3 w-16 h-1 bg-brand-500 mx-auto rounded-full"></div>
+      </div>
+
+      <!-- Badge Legend -->
+      <div class="flex flex-wrap items-center justify-center gap-3 mb-14 reveal">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 ring-1 ring-blue-200 dark:ring-blue-800/50">
+          <i class="fa-solid fa-landmark text-[10px]"></i> Academia
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 ring-1 ring-amber-200 dark:ring-amber-800/50">
+          <i class="fa-solid fa-briefcase text-[10px]"></i> Industry
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 ring-1 ring-emerald-200 dark:ring-emerald-800/50">
+          <i class="fa-solid fa-code-branch text-[10px]"></i> Open Source
+        </span>
       </div>
 
       <!-- Timeline -->
       <div class="space-y-10">
 
-        <!-- Item 1 -->
+        <!-- ── CTO — Iassis Medical Group ────────────────────────── -->
         <div class="timeline-item relative pl-12 reveal">
-          <div class="absolute left-0 top-1 w-10 h-10 rounded-full bg-brand-100 dark:bg-brand-900/40 flex items-center justify-center">
-            <i class="fa-solid fa-microscope text-brand-600 dark:text-brand-400 text-sm"></i>
+          <div class="absolute left-0 top-1 w-10 h-10 rounded-full bg-amber-100 dark:bg-amber-900/40 flex items-center justify-center">
+            <i class="fa-solid fa-building text-amber-600 dark:text-amber-400 text-sm"></i>
           </div>
           <div>
-            <span class="inline-block px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-brand-900/30 rounded-full mb-2">Current</span>
-            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Post-doctoral Researcher & Head of AIoT Group</h3>
-            <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">University of Patras &middot; IoT Laboratory</p>
-            <p class="text-slate-600 dark:text-slate-300 mt-2 leading-relaxed text-justify">
-              Leading the Artificial Intelligence of Things Group. Coordinating the technical and algorithmic domain of the
-              Pfizer CDI-funded research project "Voice-Based Diagnostics using smartphone devices and AI". Directing the
-              Laboratory's Digital Health Group (DHG).
-            </p>
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider rounded-full bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 ring-1 ring-amber-200 dark:ring-amber-800/50">
+                <i class="fa-solid fa-briefcase text-[9px]"></i> Industry
+              </span>
+              <span class="text-xs font-medium text-slate-400 dark:text-slate-500">Sep 2025 &ndash; Present</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Chief Technology Officer (CTO)</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">Iassis Medical Group &middot; Patras / Athens, GR</p>
+            <ul class="mt-3 space-y-1.5 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              <li class="flex gap-2"><span class="text-amber-500 mt-0.5">&bull;</span><span class="text-justify">Responsible for IT services and products at scale: web platforms, DevOps, Cloud, data engineering, and ML/AI</span></li>
+              <li class="flex gap-2"><span class="text-amber-500 mt-0.5">&bull;</span><span class="text-justify">Leading cross-functional teams spanning engineering, marketing, and clinical staff</span></li>
+            </ul>
           </div>
         </div>
 
-        <!-- Item 2 -->
+        <!-- ── Post-Doc & AIoT Group Leader — UoP ────────────────── -->
         <div class="timeline-item relative pl-12 reveal">
-          <div class="absolute left-0 top-1 w-10 h-10 rounded-full bg-brand-100 dark:bg-brand-900/40 flex items-center justify-center">
-            <i class="fa-solid fa-graduation-cap text-brand-600 dark:text-brand-400 text-sm"></i>
+          <div class="absolute left-0 top-1 w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center">
+            <i class="fa-solid fa-microscope text-blue-600 dark:text-blue-400 text-sm"></i>
           </div>
           <div>
-            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Ph.D. in Artificial Intelligence of Things</h3>
-            <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">University of Patras &middot; Computer Engineering & Informatics Dept.</p>
-            <p class="text-slate-600 dark:text-slate-300 mt-2 leading-relaxed text-justify">
-              Developed innovative AI mechanisms for passive health monitoring — integrating HAR, Trustworthy AI,
-              Explainable AI, Crowdsensing, and Text Mining for Allergic Rhinitis detection.
-            </p>
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 ring-1 ring-blue-200 dark:ring-blue-800/50">
+                <i class="fa-solid fa-landmark text-[9px]"></i> Academia
+              </span>
+              <span class="text-xs font-medium text-slate-400 dark:text-slate-500">2023 &ndash; Present</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Post-Doctoral Researcher & AIoT Group Leader</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">University of Patras &middot; Internet of Things Laboratory (IoT-Lab)</p>
+            <ul class="mt-3 space-y-1.5 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              <li class="flex gap-2"><span class="text-blue-500 mt-0.5">&bull;</span><span class="text-justify">Directing the AIoT Group and the Digital Health Group (DHG) within the IoT Lab</span></li>
+              <li class="flex gap-2"><span class="text-blue-500 mt-0.5">&bull;</span><span class="text-justify">Co-supervising 2 Ph.D. students and 12+ postgraduate/undergraduate theses</span></li>
+              <li class="flex gap-2"><span class="text-blue-500 mt-0.5">&bull;</span><span class="text-justify">Teaching assistant for "AI Algorithms and Applications for IoT" undergraduate course</span></li>
+            </ul>
           </div>
         </div>
 
-        <!-- Item 3 -->
+        <!-- ── Guest Lecturer — Neapolis University ──────────────── -->
         <div class="timeline-item relative pl-12 reveal">
-          <div class="absolute left-0 top-1 w-10 h-10 rounded-full bg-brand-100 dark:bg-brand-900/40 flex items-center justify-center">
-            <i class="fa-solid fa-building text-brand-600 dark:text-brand-400 text-sm"></i>
+          <div class="absolute left-0 top-1 w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center">
+            <i class="fa-solid fa-chalkboard-user text-blue-600 dark:text-blue-400 text-sm"></i>
           </div>
           <div>
-            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Senior Engineer & AI Architect</h3>
-            <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">CTI "Diophantus" &middot; University of Patras</p>
-            <p class="text-slate-600 dark:text-slate-300 mt-2 leading-relaxed text-justify">
-              Served as researcher, product manager, senior engineer, and AI architect across multiple EU-funded and national
-              R&D projects, including "SAINT", "Privacy Flag", "Personal Allergy Tracer", and "Integrated PV Surveillance System".
-            </p>
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 ring-1 ring-blue-200 dark:ring-blue-800/50">
+                <i class="fa-solid fa-landmark text-[9px]"></i> Academia
+              </span>
+              <span class="text-xs font-medium text-slate-400 dark:text-slate-500">Sep 2024 &ndash; Present</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Guest Lecturer</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">Neapolis University &middot; Dept. of Computer Science &middot; Paphos, CY</p>
+            <ul class="mt-3 space-y-1.5 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              <li class="flex gap-2"><span class="text-blue-500 mt-0.5">&bull;</span><span class="text-justify">Teaching "Research Methodologies" in the MSc "Information Systems and Digital Innovation" program</span></li>
+              <li class="flex gap-2"><span class="text-blue-500 mt-0.5">&bull;</span><span class="text-justify">Supervising postgraduate theses in AI and digital transformation topics</span></li>
+            </ul>
           </div>
         </div>
 
-        <!-- Item 4 -->
+        <!-- ── Pfizer CDI — EyeAI ────────────────────────────────── -->
         <div class="timeline-item relative pl-12 reveal">
-          <div class="absolute left-0 top-1 w-10 h-10 rounded-full bg-brand-100 dark:bg-brand-900/40 flex items-center justify-center">
-            <i class="fa-brands fa-google text-brand-600 dark:text-brand-400 text-sm"></i>
+          <div class="absolute left-0 top-1 w-10 h-10 rounded-full bg-amber-100 dark:bg-amber-900/40 flex items-center justify-center">
+            <i class="fa-solid fa-eye text-amber-600 dark:text-amber-400 text-sm"></i>
           </div>
           <div>
-            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Google Summer of Code (2019 & 2020)</h3>
-            <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">JBoss (Red Hat) &middot; MetaBrainz</p>
-            <p class="text-slate-600 dark:text-slate-300 mt-2 leading-relaxed text-justify">
-              Developed open-source software and ML infrastructure. Continued maintenance and improvement of contributed projects.
-            </p>
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider rounded-full bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 ring-1 ring-amber-200 dark:ring-amber-800/50">
+                <i class="fa-solid fa-briefcase text-[9px]"></i> Industry
+              </span>
+              <span class="text-xs font-medium text-slate-400 dark:text-slate-500">Jan 2025 &ndash; Present</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Tech Lead, AI & System Architect &mdash; EyeAI</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">Pfizer CDI (Direct Contract) &middot; University of Patras</p>
+            <ul class="mt-3 space-y-1.5 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              <li class="flex gap-2"><span class="text-amber-500 mt-0.5">&bull;</span><span class="text-justify">Designing a web tool for eye-image collection and annotation related to jaundice detection</span></li>
+              <li class="flex gap-2"><span class="text-amber-500 mt-0.5">&bull;</span><span class="text-justify">Built an on-device (edge) AI service for sclera segmentation from smartphone cameras (iOS)</span></li>
+              <li class="flex gap-2"><span class="text-amber-500 mt-0.5">&bull;</span><span class="text-justify">Leading a team of 2 software engineers and 2 computer scientists</span></li>
+            </ul>
           </div>
         </div>
 
-        <!-- Item 5 -->
+        <!-- ── EU Horizon SynAirG ────────────────────────────────── -->
         <div class="timeline-item relative pl-12 reveal">
-          <div class="absolute left-0 top-1 w-10 h-10 rounded-full bg-brand-100 dark:bg-brand-900/40 flex items-center justify-center">
-            <i class="fa-solid fa-award text-brand-600 dark:text-brand-400 text-sm"></i>
+          <div class="absolute left-0 top-1 w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center">
+            <i class="fa-solid fa-earth-europe text-blue-600 dark:text-blue-400 text-sm"></i>
           </div>
           <div>
-            <h3 class="text-lg font-bold text-slate-900 dark:text-white">M.Sc. in Computer Science & Technology</h3>
-            <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">University of Patras &middot; 2018</p>
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 ring-1 ring-blue-200 dark:ring-blue-800/50">
+                <i class="fa-solid fa-landmark text-[9px]"></i> Academia
+              </span>
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider rounded-full bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 ring-1 ring-brand-200 dark:ring-brand-800/50">
+                EU Horizon
+              </span>
+              <span class="text-xs font-medium text-slate-400 dark:text-slate-500">Sep 2022 &ndash; Present</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Work Package Tech Lead &mdash; SynAirG</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">EU Horizon Europe / Health &middot; University of Patras (leading 6 organisations)</p>
+            <ul class="mt-3 space-y-1.5 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              <li class="flex gap-2"><span class="text-blue-500 mt-0.5">&bull;</span><span class="text-justify">Designing the AI modelling for identifying synergistic interactions of indoor air pollutants on childhood health</span></li>
+              <li class="flex gap-2"><span class="text-blue-500 mt-0.5">&bull;</span><span class="text-justify">Integrating Explainable AI, Causation AI, and an advanced ETL mechanism across diverse data sources</span></li>
+              <li class="flex gap-2"><span class="text-blue-500 mt-0.5">&bull;</span><span class="text-justify">Coordinating 6 partner companies, organizations, and universities for AI analysis delivery</span></li>
+            </ul>
           </div>
         </div>
 
-        <!-- Item 6 -->
+        <!-- ── Pfizer CDI — VBD 1 & 2 ───────────────────────────── -->
         <div class="timeline-item relative pl-12 reveal">
-          <div class="absolute left-0 top-1 w-10 h-10 rounded-full bg-brand-100 dark:bg-brand-900/40 flex items-center justify-center">
-            <i class="fa-solid fa-diploma text-brand-600 dark:text-brand-400 text-sm"></i>
+          <div class="absolute left-0 top-1 w-10 h-10 rounded-full bg-amber-100 dark:bg-amber-900/40 flex items-center justify-center">
+            <i class="fa-solid fa-waveform-lines text-amber-600 dark:text-amber-400 text-sm"></i>
           </div>
           <div>
-            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Diploma in Computer Science</h3>
-            <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">University of Patras &middot; 2014</p>
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider rounded-full bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 ring-1 ring-amber-200 dark:ring-amber-800/50">
+                <i class="fa-solid fa-briefcase text-[9px]"></i> Industry
+              </span>
+              <span class="text-xs font-medium text-slate-400 dark:text-slate-500">Jun 2022 &ndash; Jul 2024</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Tech Lead, AI & System Architect &mdash; Voice-Based Diagnostics</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">Pfizer CDI (Direct Contract) &middot; University of Patras</p>
+            <ul class="mt-3 space-y-1.5 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              <li class="flex gap-2"><span class="text-amber-500 mt-0.5">&bull;</span><span class="text-justify">Built an AIoT platform that processes audio sounds for respiratory disease symptom detection via smartphone microphones (AI at the Edge, TinyML)</span></li>
+              <li class="flex gap-2"><span class="text-amber-500 mt-0.5">&bull;</span><span class="text-justify">VBD-2: enhanced multi-layer AI modelling with Explainable AI for automatic disease identification</span></li>
+              <li class="flex gap-2"><span class="text-amber-500 mt-0.5">&bull;</span><span class="text-justify">Coordinated a team of 5 engineers, developers, and scientists; designed platform architecture, MLflow, and Optuna pipelines</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ── Google Summer of Code 2020 — MetaBrainz ───────────── -->
+        <div class="timeline-item relative pl-12 reveal">
+          <div class="absolute left-0 top-1 w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-900/40 flex items-center justify-center">
+            <i class="fa-brands fa-google text-emerald-600 dark:text-emerald-400 text-sm"></i>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 ring-1 ring-emerald-200 dark:ring-emerald-800/50">
+                <i class="fa-solid fa-code-branch text-[9px]"></i> Open Source
+              </span>
+              <span class="text-xs font-medium text-slate-400 dark:text-slate-500">May &ndash; Sep 2020</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Google Summer of Code 2020 &mdash; Machine Learning Engineer</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">Google LLC &middot; MetaBrainz (AcousticBrainz)</p>
+            <ul class="mt-3 space-y-1.5 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              <li class="flex gap-2"><span class="text-emerald-500 mt-0.5">&bull;</span><span class="text-justify">Replaced the legacy C++-based Gaia classification pipeline with a new Python ML infrastructure using scikit-learn and SVM</span></li>
+              <li class="flex gap-2"><span class="text-emerald-500 mt-0.5">&bull;</span><span class="text-justify">Built a Music Information Retrieval (MIR) pipeline for classifying audio features: danceability, voice, gender, timbre, mood, and genre</span></li>
+              <li class="flex gap-2"><span class="text-emerald-500 mt-0.5">&bull;</span><span class="text-justify">Dockerized the application with PostgreSQL and Flask for maintainability</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ── Google Summer of Code 2019 — JBoss ────────────────── -->
+        <div class="timeline-item relative pl-12 reveal">
+          <div class="absolute left-0 top-1 w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-900/40 flex items-center justify-center">
+            <i class="fa-brands fa-google text-emerald-600 dark:text-emerald-400 text-sm"></i>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 ring-1 ring-emerald-200 dark:ring-emerald-800/50">
+                <i class="fa-solid fa-code-branch text-[9px]"></i> Open Source
+              </span>
+              <span class="text-xs font-medium text-slate-400 dark:text-slate-500">May &ndash; Sep 2019</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Google Summer of Code 2019 &mdash; Software Engineer</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">Google LLC &middot; JBoss Community (Red Hat)</p>
+            <ul class="mt-3 space-y-1.5 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              <li class="flex gap-2"><span class="text-emerald-500 mt-0.5">&bull;</span><span class="text-justify">Developed the Release Notes Generation tool (RLGen) that collects and analyzes data from Jira and Bugzilla issue trackers</span></li>
+              <li class="flex gap-2"><span class="text-emerald-500 mt-0.5">&bull;</span><span class="text-justify">Auto-generates detailed AsciiDoc reports with release notes based on detected bugs, on-demand or event-triggered</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ── National Research — Personal Allergy Tracer ───────── -->
+        <div class="timeline-item relative pl-12 reveal">
+          <div class="absolute left-0 top-1 w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center">
+            <i class="fa-solid fa-hand-dots text-blue-600 dark:text-blue-400 text-sm"></i>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 ring-1 ring-blue-200 dark:ring-blue-800/50">
+                <i class="fa-solid fa-landmark text-[9px]"></i> Academia
+              </span>
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider rounded-full bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 ring-1 ring-amber-200 dark:ring-amber-800/50">
+                <i class="fa-solid fa-briefcase text-[9px]"></i> Industry
+              </span>
+              <span class="text-xs font-medium text-slate-400 dark:text-slate-500">Sep 2018 &ndash; Dec 2021</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">AI & System Architect &mdash; Personal Allergy Tracer (PAT)</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">National-funded Project &middot; University of Patras</p>
+            <ul class="mt-3 space-y-1.5 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              <li class="flex gap-2"><span class="text-blue-500 mt-0.5">&bull;</span><span class="text-justify">Designed and built an end-to-end AI platform for Human Gesture Recognition using Deep Learning on wearable sensor data</span></li>
+              <li class="flex gap-2"><span class="text-blue-500 mt-0.5">&bull;</span><span class="text-justify">Pioneered a passive, non-invasive approach to allergic rhinitis detection via motion data from smartwatches</span></li>
+              <li class="flex gap-2"><span class="text-blue-500 mt-0.5">&bull;</span><span class="text-justify">Led a team of 3 engineers; published 3 conference papers on breakthrough gesture recognition results</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ── CTI — EU H2020 SAINT ──────────────────────────────── -->
+        <div class="timeline-item relative pl-12 reveal">
+          <div class="absolute left-0 top-1 w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center">
+            <i class="fa-solid fa-shield-halved text-blue-600 dark:text-blue-400 text-sm"></i>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 ring-1 ring-blue-200 dark:ring-blue-800/50">
+                <i class="fa-solid fa-landmark text-[9px]"></i> Academia
+              </span>
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider rounded-full bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 ring-1 ring-brand-200 dark:ring-brand-800/50">
+                EU H2020
+              </span>
+              <span class="text-xs font-medium text-slate-400 dark:text-slate-500">May 2017 &ndash; Apr 2019</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Research Engineer & Data Scientist &mdash; SAINT</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">EU H2020 Project &middot; CTI "Diophantus", Patras, GR</p>
+            <ul class="mt-3 space-y-1.5 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              <li class="flex gap-2"><span class="text-blue-500 mt-0.5">&bull;</span><span class="text-justify">Built a platform for crawling, scraping, and analyzing text from Twitter, Clearnet, and the Dark Web for early cyber-threat detection</span></li>
+              <li class="flex gap-2"><span class="text-blue-500 mt-0.5">&bull;</span><span class="text-justify">Implemented NLP cleansing, time-series analysis, and interactive web dashboards for cybersecurity intelligence</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ── Education ─────────────────────────────────────────── -->
+        <div class="mt-16 pt-10 border-t border-slate-200 dark:border-slate-800 reveal">
+          <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-8 text-center">Education</h3>
+          <div class="grid sm:grid-cols-3 gap-6">
+            <div class="text-center">
+              <div class="w-12 h-12 rounded-full bg-brand-100 dark:bg-brand-900/40 flex items-center justify-center mx-auto mb-3">
+                <i class="fa-solid fa-graduation-cap text-brand-600 dark:text-brand-400"></i>
+              </div>
+              <h4 class="font-bold text-slate-900 dark:text-white">Ph.D. in Computer Science</h4>
+              <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">University of Patras &middot; 2022</p>
+              <p class="text-xs text-slate-400 dark:text-slate-500 mt-1 italic">AIoT & Crowdsensing for Allergic Rhinitis</p>
+            </div>
+            <div class="text-center">
+              <div class="w-12 h-12 rounded-full bg-brand-100 dark:bg-brand-900/40 flex items-center justify-center mx-auto mb-3">
+                <i class="fa-solid fa-award text-brand-600 dark:text-brand-400"></i>
+              </div>
+              <h4 class="font-bold text-slate-900 dark:text-white">M.Sc. in Computer Science</h4>
+              <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">University of Patras &middot; 2018</p>
+              <p class="text-xs text-slate-400 dark:text-slate-500 mt-1 italic">Crowdsensing for Allergen Monitoring</p>
+            </div>
+            <div class="text-center">
+              <div class="w-12 h-12 rounded-full bg-brand-100 dark:bg-brand-900/40 flex items-center justify-center mx-auto mb-3">
+                <i class="fa-solid fa-scroll text-brand-600 dark:text-brand-400"></i>
+              </div>
+              <h4 class="font-bold text-slate-900 dark:text-white">Diploma (B.Sc.) in Computer Science</h4>
+              <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">University of Patras &middot; 2014</p>
+              <p class="text-xs text-slate-400 dark:text-slate-500 mt-1 italic">Social Computing & Networking</p>
+            </div>
           </div>
         </div>
 
@@ -395,124 +612,253 @@
   </section>
 
   <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- OPEN SOURCE & PROJECTS SECTION                                 -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <section id="projects" class="py-24 bg-slate-50 dark:bg-slate-900/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Open Source & <span class="text-gradient">Projects</span></h2>
+        <div class="mt-3 w-16 h-1 bg-brand-500 mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- CrossAI -->
+        <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-6 border border-slate-200 dark:border-slate-700/50 flex flex-col reveal">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-11 h-11 rounded-lg bg-brand-100 dark:bg-brand-900/40 flex items-center justify-center shrink-0">
+              <i class="fa-brands fa-python text-brand-600 dark:text-brand-400 text-lg"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 dark:text-white text-lg">CrossAI</h3>
+              <span class="text-xs font-medium text-brand-600 dark:text-brand-400 uppercase tracking-wider">Python Library</span>
+            </div>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify mb-4 flex-grow">
+            A Python library for building cutting-edge, end-to-end AI pipelines &mdash; covering Time-Series analysis, Human Activity &
+            Gesture Recognition, and Natural Language Processing. Includes state-of-the-art Neural Network architectures for
+            time-series classification and signal processing.
+          </p>
+          <div class="flex flex-wrap gap-1.5 mb-5">
+            <span class="px-2 py-0.5 text-[11px] font-medium bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 rounded">TensorFlow</span>
+            <span class="px-2 py-0.5 text-[11px] font-medium bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 rounded">scikit-learn</span>
+            <span class="px-2 py-0.5 text-[11px] font-medium bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 rounded">NumPy</span>
+            <span class="px-2 py-0.5 text-[11px] font-medium bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 rounded">Signal Processing</span>
+            <span class="px-2 py-0.5 text-[11px] font-medium bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 rounded">HAR</span>
+          </div>
+          <a href="https://github.com/tzamalisp/cross-ai-lib" target="_blank"
+             class="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors mt-auto">
+            <i class="fa-brands fa-github"></i> View on GitHub <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+
+        <!-- RLGen -->
+        <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-6 border border-slate-200 dark:border-slate-700/50 flex flex-col reveal">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-11 h-11 rounded-lg bg-emerald-100 dark:bg-emerald-900/40 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-scroll text-emerald-600 dark:text-emerald-400 text-lg"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 dark:text-white text-lg">RLGen</h3>
+              <span class="text-xs font-medium text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">GSoC 2019 &middot; JBoss / Red Hat</span>
+            </div>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify mb-4 flex-grow">
+            Release Notes Generation open-source tool built during Google Summer of Code 2019. Dynamically collects and processes
+            data from Jira and Bugzilla issue trackers, generating detailed AsciiDoc reports with release notes &mdash; on-demand or
+            event-triggered.
+          </p>
+          <div class="flex flex-wrap gap-1.5 mb-5">
+            <span class="px-2 py-0.5 text-[11px] font-medium bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 rounded">Python</span>
+            <span class="px-2 py-0.5 text-[11px] font-medium bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 rounded">Jira API</span>
+            <span class="px-2 py-0.5 text-[11px] font-medium bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 rounded">Bugzilla</span>
+            <span class="px-2 py-0.5 text-[11px] font-medium bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 rounded">AsciiDoc</span>
+            <span class="px-2 py-0.5 text-[11px] font-medium bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 rounded">GSoC</span>
+          </div>
+          <a href="https://github.com/tzamalisp/release-notes-generation-tool" target="_blank"
+             class="inline-flex items-center gap-2 text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors mt-auto">
+            <i class="fa-brands fa-github"></i> View on GitHub <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+
+        <!-- Educational Tutorials -->
+        <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-6 border border-slate-200 dark:border-slate-700/50 flex flex-col reveal">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-11 h-11 rounded-lg bg-amber-100 dark:bg-amber-900/40 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-book-open-reader text-amber-600 dark:text-amber-400 text-lg"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 dark:text-white text-lg">AI Tutorials</h3>
+              <span class="text-xs font-medium text-amber-600 dark:text-amber-400 uppercase tracking-wider">Educational Notebooks</span>
+            </div>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify mb-4 flex-grow">
+            A series of Jupyter Notebook tutorials covering Data Science, Machine Learning, and Deep Learning with Python 3.
+            Topics include data manipulation, statistical inference, visualization, classification, forecasting,
+            and end-to-end AI modelling.
+          </p>
+          <div class="flex flex-wrap gap-1.5 mb-5">
+            <span class="px-2 py-0.5 text-[11px] font-medium bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 rounded">Jupyter</span>
+            <span class="px-2 py-0.5 text-[11px] font-medium bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 rounded">TensorFlow</span>
+            <span class="px-2 py-0.5 text-[11px] font-medium bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 rounded">Pandas</span>
+            <span class="px-2 py-0.5 text-[11px] font-medium bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 rounded">Matplotlib</span>
+            <span class="px-2 py-0.5 text-[11px] font-medium bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 rounded">scikit-learn</span>
+          </div>
+          <span class="inline-flex items-center gap-2 text-sm font-semibold text-amber-600 dark:text-amber-400 mt-auto">
+            <i class="fa-solid fa-laptop-code"></i> Notebook Collection
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
   <!-- PUBLICATIONS SECTION                                           -->
   <!-- ════════════════════════════════════════════════════════════════ -->
-  <section id="publications" class="py-24 bg-slate-50 dark:bg-slate-900/50">
+  <section id="publications" class="py-24">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Section Header -->
       <div class="text-center mb-16 reveal">
         <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Selected <span class="text-gradient">Publications</span></h2>
         <div class="mt-3 w-16 h-1 bg-brand-500 mx-auto rounded-full"></div>
-        <p class="mt-4 text-slate-500 dark:text-slate-400 max-w-xl mx-auto">Peer-reviewed contributions in AI, IoT, Healthcare, and Cybersecurity.</p>
+        <p class="mt-4 text-slate-500 dark:text-slate-400 max-w-xl mx-auto">Peer-reviewed contributions in AI, IoT, Digital Health, and Cybersecurity.</p>
       </div>
 
-      <!-- Journals -->
-      <div class="mb-12 reveal">
+      <!-- ── Journals ──────────────────────────────────────────── -->
+      <div class="mb-14 reveal">
         <h3 class="text-sm font-semibold uppercase tracking-wider text-brand-600 dark:text-brand-400 mb-6 flex items-center gap-2">
           <i class="fa-solid fa-book-open"></i> Journal Articles
         </h3>
-        <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-6 border border-slate-200 dark:border-slate-700/50">
-          <p class="text-slate-700 dark:text-slate-300 leading-relaxed text-justify">
-            Vlachos, V., Stamatiou, Y. C., <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong>, & Nikoletseas, S. (2022).
-            "The SAINT observatory subsystem: an open-source intelligence tool for uncovering cybersecurity threats."
-            <em class="text-slate-500 dark:text-slate-400">International Journal of Information Security</em>, 21(5), 1091–1106.
-          </p>
+        <div class="space-y-4">
+
+          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50">
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify">
+              Papadopoulos, N. G., Akdis, C. A., Akdis, M., Damialis, A., Esposito, G., Fergadiotou, I., Goroncy, C., et al. (2024).
+              "Addressing adverse synergies between chemical and biological pollutants at schools &mdash; The 'SynAir-G' hypothesis."
+              <em class="text-slate-500 dark:text-slate-400">Allergy</em>, 79(2), 294&ndash;301.
+            </p>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/37654007/" target="_blank"
+               class="inline-flex items-center gap-1.5 mt-3 px-3.5 py-1.5 text-xs font-semibold bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-lg hover:bg-brand-100 dark:hover:bg-brand-900/50 transition-colors">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Read Paper
+            </a>
+          </div>
+
+          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50">
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify">
+              Kapetanidis, P., Kalioras, F., Tsakonas, C., <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong>, Kontogiannis, G., Karamanidou, T., Stavropoulos, T. G., & Nikoletseas, S. (2024).
+              "Respiratory Diseases Diagnosis Using Audio Analysis and Artificial Intelligence: A Systematic Review."
+              <em class="text-slate-500 dark:text-slate-400">Sensors</em>, 24(4), 1173.
+            </p>
+            <a href="https://www.mdpi.com/1424-8220/24/4/1173" target="_blank"
+               class="inline-flex items-center gap-1.5 mt-3 px-3.5 py-1.5 text-xs font-semibold bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-lg hover:bg-brand-100 dark:hover:bg-brand-900/50 transition-colors">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Read Paper
+            </a>
+          </div>
+
+          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50">
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify">
+              <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong>, Papadopoulos, N. G., Akdis, C. A., Akdis, M., Damialis, A., Esposito, G., Fergadiotou, I., Goroncy, C., et al. (2024).
+              "Addressing adverse synergies between chemical and biological pollutants at schools &mdash; The 'SynAir-G' hypothesis."
+              <em class="text-slate-500 dark:text-slate-400">Allergy</em>, 79(2), 294&ndash;301.
+            </p>
+            <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/all.15857" target="_blank"
+               class="inline-flex items-center gap-1.5 mt-3 px-3.5 py-1.5 text-xs font-semibold bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-lg hover:bg-brand-100 dark:hover:bg-brand-900/50 transition-colors">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Read Paper
+            </a>
+          </div>
+
+          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50">
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify">
+              Vlachos, V., Stamatiou, Y. C., <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong>, & Nikoletseas, S. (2022).
+              "The SAINT observatory subsystem: an open-source intelligence tool for uncovering cybersecurity threats."
+              <em class="text-slate-500 dark:text-slate-400">International Journal of Information Security</em>, 21(5), 1091&ndash;1106.
+            </p>
+            <a href="https://link.springer.com/article/10.1007/s10207-022-00599-2" target="_blank"
+               class="inline-flex items-center gap-1.5 mt-3 px-3.5 py-1.5 text-xs font-semibold bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-lg hover:bg-brand-100 dark:hover:bg-brand-900/50 transition-colors">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Read Paper
+            </a>
+          </div>
+
         </div>
       </div>
 
-      <!-- Conferences -->
+      <!-- ── Conference Proceedings ─────────────────────────────── -->
       <div class="reveal">
         <h3 class="text-sm font-semibold uppercase tracking-wider text-brand-600 dark:text-brand-400 mb-6 flex items-center gap-2">
-          <i class="fa-solid fa-users-rectangle"></i> Refereed Conferences
+          <i class="fa-solid fa-users-rectangle"></i> Selected Conference Proceedings
         </h3>
         <div class="grid md:grid-cols-2 gap-4">
 
-          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50">
-            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify">
-              <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong>, Bardoutsos, A., Markantonatos, D., et al. (2022).
+          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50 flex flex-col">
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify flex-grow">
+              <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong>, Kontogiannis, G., & Nikoletseas, S. (2024).
+              "Exploring the Impact of Synthetic Data on Human Gesture Recognition Tasks Using GANs."
+              <em class="text-slate-500 dark:text-slate-400">DCOSS-IoT 2024</em>, pp. 384&ndash;391. IEEE.
+            </p>
+            <a href="https://ieeexplore.ieee.org/abstract/document/10621531" target="_blank"
+               class="inline-flex items-center gap-1.5 mt-3 px-3.5 py-1.5 text-xs font-semibold bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-lg hover:bg-brand-100 dark:hover:bg-brand-900/50 transition-colors w-fit">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Read Paper
+            </a>
+          </div>
+
+          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50 flex flex-col">
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify flex-grow">
+              <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong>, Nikoletseas, S., & Spirakis, P. G. (2023).
+              "GestureSet: Public Domain Dataset for Human Gesture Recognition using Wrist-worn Devices: A Preliminary Version."
+              <em class="text-slate-500 dark:text-slate-400">DCOSS-IoT 2023</em>, pp. 404&ndash;413. IEEE.
+            </p>
+            <a href="https://ieeexplore.ieee.org/document/10257296" target="_blank"
+               class="inline-flex items-center gap-1.5 mt-3 px-3.5 py-1.5 text-xs font-semibold bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-lg hover:bg-brand-100 dark:hover:bg-brand-900/50 transition-colors w-fit">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Read Paper
+            </a>
+          </div>
+
+          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50 flex flex-col">
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify flex-grow">
+              <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong>, Bardoutsos, A., Markantonatos, D., Raptopoulos, C., Nikoletseas, S., Aggelides, X., & Papadopoulos, N. (2022).
               "End-to-end Gesture Recognition Framework for the Identification of Allergic Rhinitis Symptoms."
-              <em class="text-slate-500 dark:text-slate-400">IEEE DCOSS 2022</em>, pp. 25–34.
+              <em class="text-slate-500 dark:text-slate-400">IEEE DCOSS 2022</em>, pp. 25&ndash;34.
             </p>
+            <a href="https://ieeexplore.ieee.org/document/9881698" target="_blank"
+               class="inline-flex items-center gap-1.5 mt-3 px-3.5 py-1.5 text-xs font-semibold bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-lg hover:bg-brand-100 dark:hover:bg-brand-900/50 transition-colors w-fit">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Read Paper
+            </a>
           </div>
 
-          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50">
-            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify">
-              Bothos, I., Vlachos, V., Kyriazanos, D. M., Stamatiou, I., Thanos, K. G., <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong>, et al. (2021).
-              "Modelling cyber-risk in an economic perspective."
-              <em class="text-slate-500 dark:text-slate-400">IEEE CSR 2021</em>, pp. 372–377.
-            </p>
-          </div>
-
-          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50">
-            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify">
-              Bardoutsos, A., Matzarapis, G., Nikoletseas, S., Spirakis, P. G., & <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong> (2021).
+          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50 flex flex-col">
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify flex-grow">
+              <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong>, Bardoutsos, A., Matzarapis, G., Nikoletseas, S., & Spirakis, P. G. (2021).
               "A Complementary Sensing Platform for a holistic approach to Allergic Rhinitis monitoring."
-              <em class="text-slate-500 dark:text-slate-400">IEEE DCOSS 2021</em>, pp. 171–180.
+              <em class="text-slate-500 dark:text-slate-400">IEEE DCOSS 2021</em>, pp. 171&ndash;180.
             </p>
+            <a href="https://ieeexplore.ieee.org/document/9600063" target="_blank"
+               class="inline-flex items-center gap-1.5 mt-3 px-3.5 py-1.5 text-xs font-semibold bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-lg hover:bg-brand-100 dark:hover:bg-brand-900/50 transition-colors w-fit">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Read Paper
+            </a>
           </div>
 
-          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50">
-            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify">
-              Bardoutsos, A., Markantonatos, D., Nikoletseas, S., Spirakis, P. G., & <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong> (2021).
-              "A human-centered Web-based tool for effective real-time motion data collection from BLE IoT devices."
-              <em class="text-slate-500 dark:text-slate-400">IEEE DCOSS 2021</em>, pp. 380–389.
-            </p>
-          </div>
-
-          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50">
-            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify">
-              Aggelides, X., Bardoutsos, A., Nikoletseas, S., Papadopoulos, N., Raptopoulos, C., & <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong> (2020).
-              "A gesture recognition approach to classifying allergic rhinitis gestures using wrist-worn devices."
-              <em class="text-slate-500 dark:text-slate-400">IEEE DCOSS 2020</em>, pp. 1–10.
-            </p>
-          </div>
-
-          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50">
-            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify">
-              Bardoutsos, A., Filios, G., Katsidimas, I., Krousarlis, T., Nikoletseas, S., & <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong> (2020).
-              "A multidimensional human-centric framework for environmental intelligence."
-              <em class="text-slate-500 dark:text-slate-400">IEEE DCOSS 2020</em>, pp. 155–164.
-            </p>
-          </div>
-
-          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50">
-            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify">
+          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50 flex flex-col">
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify flex-grow">
               <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong>, Vikatos, P., & Nikoletseas, S. (2019).
-              "A hybridization of mobile crowdsensing, twitter analytics, and sensor data for pollen onsets detection."
-              <em class="text-slate-500 dark:text-slate-400">IEEE DCOSS 2019</em>, pp. 188–191.
+              "A Hybridization of Mobile Crowdsensing, Twitter Analytics, and Sensor Data for the Holistic Approach of Pollen Onset Detection."
+              <em class="text-slate-500 dark:text-slate-400">IEEE DCOSS 2019</em>, pp. 188&ndash;191.
             </p>
+            <a href="https://ieeexplore.ieee.org/document/8804479" target="_blank"
+               class="inline-flex items-center gap-1.5 mt-3 px-3.5 py-1.5 text-xs font-semibold bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-lg hover:bg-brand-100 dark:hover:bg-brand-900/50 transition-colors w-fit">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Read Paper
+            </a>
           </div>
 
-          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50">
-            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify">
-              Vlachos, V., Stamatiou, Y. C., <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong>, Nikoletseas, S., & Chantzi, K. (2019).
-              "A social network analysis tool for uncovering cybersecurity threats."
-              <em class="text-slate-500 dark:text-slate-400">ICS & SCADA Cyber Security Research 2019</em>, pp. 97–106.
+          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50 flex flex-col">
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify flex-grow">
+              <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong>, Kalogiros, L. A., Lagouvardos, K., Nikoletseas, S., & Papadopoulos, N. (2018).
+              "Allergymap: a hybrid mHealth mobile crowdsensing system for allergic diseases epidemiology."
+              <em class="text-slate-500 dark:text-slate-400">IEEE PerCom Workshops 2018</em>, pp. 597&ndash;602.
             </p>
+            <a href="https://ieeexplore.ieee.org/document/8480280" target="_blank"
+               class="inline-flex items-center gap-1.5 mt-3 px-3.5 py-1.5 text-xs font-semibold bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-lg hover:bg-brand-100 dark:hover:bg-brand-900/50 transition-colors w-fit">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Read Paper
+            </a>
           </div>
 
-          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50 md:col-span-2">
-            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify">
-              Kalogiros, L. A., Lagouvardos, K., Nikoletseas, S., Papadopoulos, N., & <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong> (2018).
-              "Allergymap: a hybrid mhealth mobile crowdsensing system for allergic diseases epidemiology."
-              <em class="text-slate-500 dark:text-slate-400">IEEE PerCom Workshops 2018</em>, pp. 597–602.
-            </p>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Demos -->
-      <div class="mt-12 reveal">
-        <h3 class="text-sm font-semibold uppercase tracking-wider text-brand-600 dark:text-brand-400 mb-6 flex items-center gap-2">
-          <i class="fa-solid fa-flask"></i> Demos & Posters
-        </h3>
-        <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-6 border border-slate-200 dark:border-slate-700/50">
-          <p class="text-slate-700 dark:text-slate-300 leading-relaxed text-justify">
-            Aggelides, X., Xepapadaki, P., Vidalis, P., Rovina, N., Gavogiannakis, N., Nikoletseas, S., & <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong> (2020).
-            "Personal Allergy Tracker (PAT): Description of a study protocol utilizing m-Health technology for monitoring allergic rhinitis."
-            <em class="text-slate-500 dark:text-slate-400">ALLERGY</em>, vol. 75, pp. 52–53. Wiley.
-          </p>
         </div>
       </div>
     </div>

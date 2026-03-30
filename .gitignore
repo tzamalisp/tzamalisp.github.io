@@ -21,3 +21,4 @@ package-lock.json
 # Misc
 *.zip
 *.log
+misc.xml
