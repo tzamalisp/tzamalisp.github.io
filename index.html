@@ -1,190 +1,1168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="The personal website of the Researcher and Artificial Intelligence Engineer,
-									Pantelis Tzamalis">
-	<meta name="author"      content="Pantelis Tzamalis">
-	
-	<title>Pantelis Tzamalis | Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pantelis Tzamalis — Ph.D., CTO, AI &amp; System Architect. Post-Doctoral Researcher; expert in AI/ML, IoT, Digital Healthcare, and scalable intelligent systems.">
+  <meta name="author" content="Pantelis Tzamalis">
+  <meta name="keywords" content="Pantelis Tzamalis, Ph.D., CTO, AI, Artificial Intelligence, Machine Learning, IoT, Healthcare 5.0, System Architect">
 
-	<link rel="shortcut icon" href="assets/images/fav_ai.png">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pantelis Tzamalis — Ph.D. | CTO | AI & System Architect">
+  <meta property="og:description" content="Ph.D. and CTO; technology leader and researcher in AI, IoT, and Digital Healthcare.">
+  <meta property="og:type" content="website">
 
-	<!-- Bootstrap -->
-	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
-	<!-- Icons -->
-	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-	<!-- Fonts -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
-	<!-- Custom styles -->
-	<link rel="stylesheet" href="assets/css/styles.css">
-	<!-- Load Academicons -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <title>Pantelis Tzamalis — Ph.D. | CTO | AI & System Architect</title>
 
-	<!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
+  <link rel="shortcut icon" href="assets/images/fav_ai.png">
+
+  <!-- Tailwind CSS (Play CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50:  '#eef2ff',
+              100: '#e0e7ff',
+              200: '#c7d2fe',
+              300: '#a5b4fc',
+              400: '#818cf8',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              800: '#3730a3',
+              900: '#312e81',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Inter + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Academicons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <style>
+    /* Navbar glassmorphism */
+    .nav-scrolled {
+      @apply bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg shadow-lg;
+    }
+
+    /* Active nav link indicator */
+    .nav-active {
+      @apply text-brand-600 dark:text-brand-400;
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Timeline connector */
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 1.25rem;
+      top: 2.5rem;
+      bottom: -1.5rem;
+      width: 2px;
+      background: linear-gradient(to bottom, #6366f1, transparent);
+    }
+    .timeline-item:last-child::before {
+      display: none;
+    }
+
+    /* Publication card hover lift */
+    .pub-card {
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .pub-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    }
+
+    /* Gradient text utility */
+    .text-gradient {
+      background: linear-gradient(135deg, #6366f1, #8b5cf6, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  </style>
 </head>
-<body class="home">
 
-<header id="header">
-	<div id="head" class="parallax" parallax-speed="2">
-		<h1 id="logo" class="text-center">
-			<img class="img-circle" src="assets/images/prof_tzamalis_home.jpeg" alt="">
-			<span class="title">Pantelis Tzamalis</span>
-			<span class="tagline">Artificial Intelligence Researcher & Engineer<br>
-				<br>
-				<b>Head of the Artificial Intelligence of Things Group, Ph.D.</b><br>
-				<i>University of Patras, Computer Technology Institute (CTI), Patras, GR</i><br>
-				<a href="mailto:p.tzamalis@upnet.gr">p.tzamalis@upnet.gr</a></span>
-		</h1>
-	</div>
+<body class="font-sans bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-200 antialiased transition-colors duration-300">
 
-	<nav class="navbar navbar-default navbar-sticky">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBarTzamalis">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-			</div>
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- NAVBAR                                                         -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
 
-			<div class="collapse navbar-collapse" id="navBarTzamalis">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="index.html">Home</a></li>
-					<li><a href="about.html">About</a></li>
-                    <li><a href="publications.html">Publications</a></li>
-					<li><a href="news.html">News</a></li>
-				</ul>
-			</div><!--/.nav-collapse -->
-		</div>
-	</nav>
-</header>
+        <!-- Logo / Name -->
+        <a href="#hero" class="text-lg font-bold tracking-tight text-slate-900 dark:text-white hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
+          P<span class="text-brand-600 dark:text-brand-400">.</span>Tzamalis
+        </a>
 
-<main id="main">
+        <!-- Desktop Nav Links -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#about" class="nav-link text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">About</a>
+          <a href="#experience" class="nav-link text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Experience</a>
+          <a href="#projects" class="nav-link text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Projects</a>
+          <a href="#publications" class="nav-link text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Publications</a>
+          <a href="#news" class="nav-link text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">News</a>
+          <a href="#contact" class="nav-link text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Contact</a>
 
-	<div class="container">
+          <!-- Dark/Light Toggle -->
+          <button id="theme-toggle" aria-label="Toggle dark mode" class="p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+            <!-- Sun icon (shown in dark mode) -->
+            <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+            </svg>
+            <!-- Moon icon (shown in light mode) -->
+            <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+            </svg>
+          </button>
+        </div>
 
-		<div class="row section topspace">
-			<div class="col-md-12">
-				<p class="lead text-center text-muted">
-					Hi, I'm Pantelis Tzamalis and, currently, I'm a Post-doctoral Researcher and Head of the AIoT Group
-					at the Internet of Things Laboratory of the Computer Engineering and Informatics Department at the
-					University of Patras, Greece. My research interests comprise:
-					<ul class="lead text-center text-muted">
-						<li>Artificial Intelligence (Machine Learning, Deep Learning)</li>
-						<li>Internet of Things</li>
-						<li>Digital Healthcare, Healthcare 5.0</li>
-						<li>Analysis of vital signs and biomarkers through the usage of sensors</li>
-						<li>Human Activity & Gesture Recognition (Smartphones, Smart wearables)</li>
-						<li>Audio Analysis (Audio Classification || Music, Voice, Respiratory Sounds, etc.)</li>
-						<li>Text Analysis</li>
-					</ul>
-				</p>
-				<p class="lead text-center text-muted">
-				More information can be found in the <a href="about.html">About</a> section. I'll update the website
-				with more content soon..
-				</p>
-			</div>
-		</div> <!-- / section -->
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Open menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
 
-		<div class="row section clients topspace">
-			<h2 class="section-title"><span>Videos</span></h2>
-			<div class="col-md-12 offset-2">
-<!--			<div class="col-lg-12">-->
-				<div class="panel panel-cta"><div class="panel-body">
-					<div class="video-container">
-						 <embed class="video-embed" src="https://www.youtube.com/embed/Zz8i-XCS0iU"
-								title="Pantelis Tzamalis talks about Digital Healthcare on ITU Webinar (Nov 2021)">
-					</div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
+        <a href="#about" class="nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">About</a>
+        <a href="#experience" class="nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Experience</a>
+        <a href="#projects" class="nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Projects</a>
+        <a href="#publications" class="nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Publications</a>
+        <a href="#news" class="nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">News</a>
+        <a href="#contact" class="nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Contact</a>
+        <button id="theme-toggle-mobile" aria-label="Toggle dark mode" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors w-full">
+          <svg class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          <svg class="w-4 h-4 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          <span class="dark:hidden">Dark Mode</span>
+          <span class="hidden dark:inline">Light Mode</span>
+        </button>
+      </div>
+    </div>
+  </nav>
 
-				</div>
-			</div>
-		</div> <!-- /section -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- HERO SECTION                                                   -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <!-- Subtle background decoration -->
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+    </div>
 
-	</div>	<!-- /container -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+      <!-- Profile Image -->
+      <div class="mb-8 reveal">
+        <img src="assets/images/prof_tzamalis_home.jpeg" alt="Pantelis Tzamalis"
+             class="w-36 h-36 rounded-full mx-auto object-cover ring-4 ring-brand-500/30 shadow-xl">
+      </div>
 
-</main>
+      <!-- Name & Title -->
+      <div class="reveal">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4">
+          Pantelis <span class="text-gradient">Tzamalis</span><span class="text-slate-400 dark:text-slate-500">,</span>
+          <span class="text-gradient">Ph.D.</span>
+        </h1>
+        <p class="text-lg sm:text-xl font-medium text-slate-500 dark:text-slate-400 mb-3">
+          Ph.D. &middot; Chief Technology Officer (CTO) &middot; Post-Doctoral Researcher &middot; AI &amp; System Architect
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-x-6 gap-y-1 text-sm text-slate-400 dark:text-slate-500">
+          <span class="flex items-center gap-1.5">
+            <i class="fa-solid fa-building text-brand-500/70 text-xs"></i>
+            Chief Technology Officer (CTO) &middot; Iassis Medical Group, GR
+          </span>
+          <span class="flex items-center gap-1.5">
+            <i class="fa-solid fa-flask text-brand-500/70 text-xs"></i>
+            Post-Doctoral Researcher (Ph.D.) &middot; AIoT Group Leader, IoT Lab &middot; University of Patras, GR
+          </span>
+          <span class="flex items-center gap-1.5">
+            <i class="fa-solid fa-chalkboard-user text-brand-500/70 text-xs"></i>
+            Guest Lecturer &middot; Neapolis University, CY
+          </span>
+        </div>
+      </div>
 
-<footer id="footer">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-3 widget">
-				<h3 class="widget-title">Contact</h3>
-				<div class="widget-body">
-					<p>(+30) 2610 996 964<br>
-						<a href="mailto:p.tzamalis@upnet.gr">p.tzamalis@upnet.gr</a><br>
-						<br>
-						Computer Engineering and Informatics Department, University of Patras, GR
-						<br>
-						<br>
-						25is Martiou 7, Kato Kastritsi 265 04
-					</p>
-				</div>
-			</div>
+      <!-- CTA Buttons -->
+      <div class="mt-10 flex flex-wrap items-center justify-center gap-4 reveal">
+        <a href="#contact"
+           class="inline-flex items-center gap-2 px-6 py-3 bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold rounded-lg shadow-lg shadow-brand-500/25 transition-all hover:shadow-xl hover:shadow-brand-500/30">
+          <i class="fa-solid fa-envelope"></i> Get in Touch
+        </a>
+        <a href="https://scholar.google.gr/citations?user=zo_G-TIAAAAJ&hl=en" target="_blank"
+           class="inline-flex items-center gap-2 px-6 py-3 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-sm font-semibold rounded-lg transition-all">
+          <i class="ai ai-google-scholar"></i> Google Scholar
+        </a>
+        <a href="https://dblp.uni-trier.de/pers/hd/t/Tzamalis:Pantelis" target="_blank"
+           class="inline-flex items-center gap-2 px-6 py-3 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-sm font-semibold rounded-lg transition-all">
+          <i class="ai ai-dblp"></i> DBLP
+        </a>
+      </div>
 
-			<div class="col-md-3 widget">
-				<h3 class="widget-title">SOCIAL</h3>
-				<div class="widget-body">
-					<p class="follow-me-icons">
-						<a href="https://github.com/tzamalisp" target="_blank"><i class="fa fa-github fa-2"></i></a>
-						<a href="https://www.linkedin.com/in/pantelis-tzamalis/" target="_blank"><i class="fa fa-linkedin"></i></a>
-						<a href="https://scholar.google.gr/citations?user=zo_G-TIAAAAJ&hl=en" target="_blank"><i class="ai ai-google-scholar-square"></i></a>
-						<a href="https://www.researchgate.net/profile/Pantelis-Tzamalis" target="_blank"><i class="ai ai-researchgate"></i></a>
-						<a href="https://twitter.com/tzamalisp" target="_blank"><i class="fa fa-twitter fa-2"></i></a>
-					</p>
-				</div>
-			</div>
+      <!-- Social Links -->
+      <div class="mt-8 flex items-center justify-center gap-5 reveal">
+        <a href="https://www.linkedin.com/in/pantelis-tzamalis/" target="_blank" aria-label="LinkedIn"
+           class="text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 text-xl transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/tzamalisp" target="_blank" aria-label="GitHub"
+           class="text-slate-400 hover:text-slate-700 dark:hover:text-white text-xl transition-colors"><i class="fa-brands fa-github"></i></a>
+        <a href="https://github.com/AIoT-Group-UoP" target="_blank" aria-label="AIoT Group GitHub"
+           class="text-slate-400 hover:text-slate-700 dark:hover:text-white text-xl transition-colors" title="AIoT Group @ UoP"><i class="fa-solid fa-users"></i></a>
+        <a href="https://scholar.google.gr/citations?user=zo_G-TIAAAAJ&hl=en" target="_blank" aria-label="Google Scholar"
+           class="text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 text-xl transition-colors"><i class="ai ai-google-scholar"></i></a>
+        <a href="https://www.researchgate.net/profile/Pantelis-Tzamalis" target="_blank" aria-label="ResearchGate"
+           class="text-slate-400 hover:text-green-600 dark:hover:text-green-400 text-xl transition-colors"><i class="ai ai-researchgate"></i></a>
+        <a href="https://twitter.com/tzamalisp" target="_blank" aria-label="X / Twitter"
+           class="text-slate-400 hover:text-slate-700 dark:hover:text-white text-xl transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </section>
 
-			<div class="col-md-3 widget">
-				<h3 class="widget-title">Who I am in a few words</h3>
-				<div class="widget-body">
-					<p>Ph.D., Research Engineer, AI & Systems Architect, author of GSoC 2019 and 2020 projects with
-						JBoss and MetaBrainz, Artificial Intelligence enthusiast</p>
-				</div>
-			</div>
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- ABOUT SECTION                                                  -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <section id="about" class="py-24 bg-slate-50 dark:bg-slate-900/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-16 reveal">
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">About <span class="text-gradient">Me</span></h2>
+        <div class="mt-3 w-16 h-1 bg-brand-500 mx-auto rounded-full"></div>
+      </div>
 
-			<div class="col-md-3 widget">
-				<h3 class="widget-title">Office Location</h3>
-				<div class="widget-body">
-					<embed src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12526.152748391438!2d21.7956693!3d38.2901968!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb6bb043c29ce2b46!2sDepartment%20of%20Computer%20Engineering%20and%20Informatics%2C%20School%20of%20Engineering%2C%20University%20of%20Patras!5e0!3m2!1sen!2sgr!4v1675540376926!5m2!1sen!2sgr"
-							width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-						   referrerpolicy="no-referrer-when-downgrade">
-				</div>
-			</div>
+      <div class="grid lg:grid-cols-5 gap-12 items-start">
+        <!-- Bio (3 cols) -->
+        <div class="lg:col-span-3 space-y-5 text-slate-600 dark:text-slate-300 leading-relaxed text-justify reveal">
+          <p>
+            Pantelis Tzamalis received his <strong class="text-slate-800 dark:text-slate-100">Ph.D. in Computer Science</strong> from the
+            Computer Engineering and Informatics Department of the University of Patras (2022), with a thesis on
+            <em>"Allergic Rhinitis Passive Detection, Assessment, and Monitoring using Artificial Intelligence of Things
+            (AIoT) and Crowdsensing"</em>. His doctoral work produced an innovative set of mechanisms and platforms
+            integrating Human Activity & Gesture Recognition, Trustworthy AI, Explainable AI, Crowdsensing, and
+            Text Mining for passive, automated health monitoring at spatiotemporal and individual scale.
+          </p>
+          <p>
+            He also holds an <strong class="text-slate-800 dark:text-slate-100">M.Sc.</strong> in the Division of Application and
+            Foundation of Computer Science and Technology (2018) and a <strong class="text-slate-800 dark:text-slate-100">Diploma
+            (B.Sc.) in Computer Science</strong> (2014), both from the University of Patras.
+          </p>
+          <p>
+            Currently, he serves as a <strong class="text-slate-800 dark:text-slate-100">Post-Doctoral Researcher</strong> and
+            <strong class="text-slate-800 dark:text-slate-100">AIoT Group Leader</strong> at the Internet of Things Laboratory (IoT-Lab)
+            of the University of Patras, the <strong class="text-slate-800 dark:text-slate-100">Chief Technology Officer (CTO)</strong>
+            of Iassis Medical Group, and a <strong class="text-slate-800 dark:text-slate-100">Guest Lecturer</strong> at the Department
+            of Computer Science, Neapolis University, Paphos, Cyprus. He is also a Senior Researcher and Engineering
+            Manager at the Computer Technology Institute and Press &ldquo;Diophantus&rdquo;.
+          </p>
+          <p>
+            Throughout his career, he has served as a technical manager, tech lead, research engineer, and AI architect
+            across multiple EU-funded (Horizon Europe SynAirG, H2020 SAINT, H2020 Privacy Flag) and industry-funded
+            projects, including direct contracts with <strong class="text-slate-800 dark:text-slate-100">Pfizer CDI</strong> for
+            Voice-Based Diagnostics and EyeAI. He has also contracted with
+            <strong class="text-slate-800 dark:text-slate-100">Google LLC</strong> (Summer of Code 2019 & 2020) for the development
+            of open-source ML infrastructure with JBoss (Red Hat) and MetaBrainz.
+          </p>
+          <p>
+            He has authored publications in international conference proceedings and journals (IEEE, Springer Nature),
+            serves as a reviewer for various scientific venues, and has delivered invited and keynote talks including the ITU (United Nations),
+            the EU IDEAL Cluster Annual Meeting (Braga, 2025), University of Patras (2023), and the Panhellenic Congress of Allergology & Clinical Immunology (2022).
+          </p>
+        </div>
 
-		</div> <!-- /row of widgets -->
-	</div>
-</footer>
+        <!-- Expertise Tags (2 cols) -->
+        <div class="lg:col-span-2 reveal">
+          <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-4">Research Interests & Expertise</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Artificial Intelligence of Things (AIoT)</span>
+            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Time Series Analytics</span>
+            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Digital Health (Healthcare 5.0)</span>
+            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Explainable AI</span>
+            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Trustworthy AI</span>
+            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Causation AI & Causal ML</span>
+            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Neural Network Design & Deployment</span>
+            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Human Activity & Gesture Recognition</span>
+            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Audio Analysis & Voice Diagnostics</span>
+            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Digital Signal Processing</span>
+            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Crowdsensing & Crowdsourcing</span>
+            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Big Data Analytics</span>
+            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">MLOps</span>
+            <span class="px-3 py-1.5 text-sm font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full">Systems Design at Scale</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<footer id="underfooter">
-	<div class="container">
-		<div class="row">
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- EXPERIENCE TIMELINE                                            -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <section id="experience" class="py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-12 reveal">
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Career <span class="text-gradient">Timeline</span></h2>
+        <div class="mt-3 w-16 h-1 bg-brand-500 mx-auto rounded-full"></div>
+      </div>
 
-			<div class="col-md-6 widget">
-				<div class="widget-body">
-					<p>Patras, Greece</p>
-				</div>
-			</div>
+      <!-- Badge Legend -->
+      <div class="flex flex-wrap items-center justify-center gap-3 mb-14 reveal">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 ring-1 ring-blue-200 dark:ring-blue-800/50">
+          <i class="fa-solid fa-landmark text-[10px]"></i> Academia
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 ring-1 ring-amber-200 dark:ring-amber-800/50">
+          <i class="fa-solid fa-briefcase text-[10px]"></i> Industry
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 ring-1 ring-emerald-200 dark:ring-emerald-800/50">
+          <i class="fa-solid fa-code-branch text-[10px]"></i> Open Source
+        </span>
+      </div>
 
-			<div class="col-md-6 widget">
-				<div class="widget-body">
-					<p class="text-right">
-						Copyright &copy; 2023, Pantelis Tzamalis<br>
-						Design: <a href="https://www.linkedin.com/in/pantelis-tzamalis"
-								   rel="designer" target="_blank">Pantelis Tzamalis</a> </p>
-				</div>
-			</div>
+      <!-- Timeline -->
+      <div class="space-y-10">
 
-		</div> <!-- /row of widgets -->
-	</div>
-</footer>
+        <!-- ── CTO — Iassis Medical Group ────────────────────────── -->
+        <div class="timeline-item relative pl-12 reveal">
+          <div class="absolute left-0 top-1 w-10 h-10 rounded-full bg-amber-100 dark:bg-amber-900/40 flex items-center justify-center">
+            <i class="fa-solid fa-building text-amber-600 dark:text-amber-400 text-sm"></i>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider rounded-full bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 ring-1 ring-amber-200 dark:ring-amber-800/50">
+                <i class="fa-solid fa-briefcase text-[9px]"></i> Industry
+              </span>
+              <span class="text-xs font-medium text-slate-400 dark:text-slate-500">Sep 2025 &ndash; Present</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Chief Technology Officer (CTO)</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">Iassis Medical Group &middot; Patras / Athens, GR</p>
+            <ul class="mt-3 space-y-1.5 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              <li class="flex gap-2"><span class="text-amber-500 mt-0.5">&bull;</span><span class="text-justify">Responsible for IT services and products at scale: web platforms, DevOps, Cloud, data engineering, and ML/AI</span></li>
+              <li class="flex gap-2"><span class="text-amber-500 mt-0.5">&bull;</span><span class="text-justify">Leading cross-functional teams spanning engineering, marketing, and clinical staff</span></li>
+            </ul>
+          </div>
+        </div>
 
+        <!-- ── Post-Doc & AIoT Group Leader — UoP ────────────────── -->
+        <div class="timeline-item relative pl-12 reveal">
+          <div class="absolute left-0 top-1 w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center">
+            <i class="fa-solid fa-microscope text-blue-600 dark:text-blue-400 text-sm"></i>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 ring-1 ring-blue-200 dark:ring-blue-800/50">
+                <i class="fa-solid fa-landmark text-[9px]"></i> Academia
+              </span>
+              <span class="text-xs font-medium text-slate-400 dark:text-slate-500">2023 &ndash; Present</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Post-Doctoral Researcher & AIoT Group Leader</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">University of Patras &middot; Internet of Things Laboratory (IoT-Lab)</p>
+            <p class="text-xs text-slate-400 dark:text-slate-500 mt-1">Post-doc from 2025; AIoT Group Leader from 2023</p>
+            <ul class="mt-3 space-y-1.5 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              <li class="flex gap-2"><span class="text-blue-500 mt-0.5">&bull;</span><span class="text-justify">Director of the Artificial Intelligence of Things Group (AIoT Group) within the IoT Lab</span></li>
+              <li class="flex gap-2"><span class="text-blue-500 mt-0.5">&bull;</span><span class="text-justify">Co-supervising 2 Ph.D. students and 12+ postgraduate/undergraduate theses</span></li>
+              <li class="flex gap-2"><span class="text-blue-500 mt-0.5">&bull;</span><span class="text-justify">Co-teaches the undergraduate course &ldquo;Algorithmic Foundations of Sensor Networks&rdquo;; previously teaching assistant for &ldquo;Artificial Intelligence Algorithms and Applications for the Internet of Things (IoT)&rdquo; (2023&ndash;2025)</span></li>
+            </ul>
+          </div>
+        </div>
 
-<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-<script src="assets/js/template.js"></script>
+        <!-- ── Guest Lecturer — Neapolis University ──────────────── -->
+        <div class="timeline-item relative pl-12 reveal">
+          <div class="absolute left-0 top-1 w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center">
+            <i class="fa-solid fa-chalkboard-user text-blue-600 dark:text-blue-400 text-sm"></i>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 ring-1 ring-blue-200 dark:ring-blue-800/50">
+                <i class="fa-solid fa-landmark text-[9px]"></i> Academia
+              </span>
+              <span class="text-xs font-medium text-slate-400 dark:text-slate-500">Sep 2024 &ndash; Present</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Guest Lecturer</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">Neapolis University &middot; Dept. of Computer Science &middot; Paphos, CY</p>
+            <ul class="mt-3 space-y-1.5 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              <li class="flex gap-2"><span class="text-blue-500 mt-0.5">&bull;</span><span class="text-justify">Teaching "Research Methodologies" in the MSc "Information Systems and Digital Innovation" program</span></li>
+              <li class="flex gap-2"><span class="text-blue-500 mt-0.5">&bull;</span><span class="text-justify">Supervising postgraduate theses in AI and digital transformation topics</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ── Pfizer CDI — EyeAI ────────────────────────────────── -->
+        <div class="timeline-item relative pl-12 reveal">
+          <div class="absolute left-0 top-1 w-10 h-10 rounded-full bg-amber-100 dark:bg-amber-900/40 flex items-center justify-center">
+            <i class="fa-solid fa-eye text-amber-600 dark:text-amber-400 text-sm"></i>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider rounded-full bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 ring-1 ring-amber-200 dark:ring-amber-800/50">
+                <i class="fa-solid fa-briefcase text-[9px]"></i> Industry
+              </span>
+              <span class="text-xs font-medium text-slate-400 dark:text-slate-500">Jan 2025 &ndash; Present</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Tech Lead, AI & System Architect &mdash; EyeAI</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">Pfizer CDI (Direct Contract) &middot; University of Patras</p>
+            <ul class="mt-3 space-y-1.5 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              <li class="flex gap-2"><span class="text-amber-500 mt-0.5">&bull;</span><span class="text-justify">Designing a web tool for eye-image collection and annotation related to jaundice detection</span></li>
+              <li class="flex gap-2"><span class="text-amber-500 mt-0.5">&bull;</span><span class="text-justify">Built an on-device (edge) AI service for sclera segmentation from smartphone cameras (iOS)</span></li>
+              <li class="flex gap-2"><span class="text-amber-500 mt-0.5">&bull;</span><span class="text-justify">Leading a team of 2 software engineers and 2 computer scientists</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ── EU Horizon SynAirG ────────────────────────────────── -->
+        <div class="timeline-item relative pl-12 reveal">
+          <div class="absolute left-0 top-1 w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center">
+            <i class="fa-solid fa-earth-europe text-blue-600 dark:text-blue-400 text-sm"></i>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 ring-1 ring-blue-200 dark:ring-blue-800/50">
+                <i class="fa-solid fa-landmark text-[9px]"></i> Academia
+              </span>
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider rounded-full bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 ring-1 ring-brand-200 dark:ring-brand-800/50">
+                EU Horizon
+              </span>
+              <span class="text-xs font-medium text-slate-400 dark:text-slate-500">Sep 2022 &ndash; Present</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Work Package Tech Lead &mdash; SynAirG</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">EU Horizon Europe / Health &middot; University of Patras (leading 6 organisations)</p>
+            <ul class="mt-3 space-y-1.5 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              <li class="flex gap-2"><span class="text-blue-500 mt-0.5">&bull;</span><span class="text-justify">Designing the AI modelling for identifying synergistic interactions of indoor air pollutants on childhood health</span></li>
+              <li class="flex gap-2"><span class="text-blue-500 mt-0.5">&bull;</span><span class="text-justify">Integrating Explainable AI, Causation AI, and an advanced ETL mechanism across diverse data sources</span></li>
+              <li class="flex gap-2"><span class="text-blue-500 mt-0.5">&bull;</span><span class="text-justify">Coordinating 6 partner companies, organizations, and universities for AI analysis delivery</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ── Pfizer CDI — VBD 1 & 2 ───────────────────────────── -->
+        <div class="timeline-item relative pl-12 reveal">
+          <div class="absolute left-0 top-1 w-10 h-10 rounded-full bg-amber-100 dark:bg-amber-900/40 flex items-center justify-center">
+            <i class="fa-solid fa-waveform-lines text-amber-600 dark:text-amber-400 text-sm"></i>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider rounded-full bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 ring-1 ring-amber-200 dark:ring-amber-800/50">
+                <i class="fa-solid fa-briefcase text-[9px]"></i> Industry
+              </span>
+              <span class="text-xs font-medium text-slate-400 dark:text-slate-500">Jun 2022 &ndash; Jul 2024</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Tech Lead, AI & System Architect &mdash; Voice-Based Diagnostics</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">Pfizer CDI (Direct Contract) &middot; University of Patras</p>
+            <ul class="mt-3 space-y-1.5 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              <li class="flex gap-2"><span class="text-amber-500 mt-0.5">&bull;</span><span class="text-justify">Built an AIoT platform that processes audio sounds for respiratory disease symptom detection via smartphone microphones (AI at the Edge, TinyML)</span></li>
+              <li class="flex gap-2"><span class="text-amber-500 mt-0.5">&bull;</span><span class="text-justify">VBD-2: enhanced multi-layer AI modelling with Explainable AI for automatic disease identification</span></li>
+              <li class="flex gap-2"><span class="text-amber-500 mt-0.5">&bull;</span><span class="text-justify">Coordinated a team of 5 engineers, developers, and scientists; designed platform architecture, MLflow, and Optuna pipelines</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ── Google Summer of Code 2020 — MetaBrainz ───────────── -->
+        <div class="timeline-item relative pl-12 reveal">
+          <div class="absolute left-0 top-1 w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-900/40 flex items-center justify-center">
+            <i class="fa-brands fa-google text-emerald-600 dark:text-emerald-400 text-sm"></i>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 ring-1 ring-emerald-200 dark:ring-emerald-800/50">
+                <i class="fa-solid fa-code-branch text-[9px]"></i> Open Source
+              </span>
+              <span class="text-xs font-medium text-slate-400 dark:text-slate-500">May &ndash; Sep 2020</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Google Summer of Code 2020 &mdash; Machine Learning Engineer</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">Google LLC &middot; MetaBrainz (AcousticBrainz)</p>
+            <ul class="mt-3 space-y-1.5 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              <li class="flex gap-2"><span class="text-emerald-500 mt-0.5">&bull;</span><span class="text-justify">Replaced the legacy C++-based Gaia classification pipeline with a new Python ML infrastructure using scikit-learn and SVM</span></li>
+              <li class="flex gap-2"><span class="text-emerald-500 mt-0.5">&bull;</span><span class="text-justify">Built a Music Information Retrieval (MIR) pipeline for classifying audio features: danceability, voice, gender, timbre, mood, and genre</span></li>
+              <li class="flex gap-2"><span class="text-emerald-500 mt-0.5">&bull;</span><span class="text-justify">Dockerized the application with PostgreSQL and Flask for maintainability</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ── Google Summer of Code 2019 — JBoss ────────────────── -->
+        <div class="timeline-item relative pl-12 reveal">
+          <div class="absolute left-0 top-1 w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-900/40 flex items-center justify-center">
+            <i class="fa-brands fa-google text-emerald-600 dark:text-emerald-400 text-sm"></i>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 ring-1 ring-emerald-200 dark:ring-emerald-800/50">
+                <i class="fa-solid fa-code-branch text-[9px]"></i> Open Source
+              </span>
+              <span class="text-xs font-medium text-slate-400 dark:text-slate-500">May &ndash; Sep 2019</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Google Summer of Code 2019 &mdash; Software Engineer</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">Google LLC &middot; JBoss Community (Red Hat)</p>
+            <ul class="mt-3 space-y-1.5 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              <li class="flex gap-2"><span class="text-emerald-500 mt-0.5">&bull;</span><span class="text-justify">Developed the Release Notes Generation tool (RLGen) that collects and analyzes data from Jira and Bugzilla issue trackers</span></li>
+              <li class="flex gap-2"><span class="text-emerald-500 mt-0.5">&bull;</span><span class="text-justify">Auto-generates detailed AsciiDoc reports with release notes based on detected bugs, on-demand or event-triggered</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ── National Research — Personal Allergy Tracer ───────── -->
+        <div class="timeline-item relative pl-12 reveal">
+          <div class="absolute left-0 top-1 w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center">
+            <i class="fa-solid fa-hand-dots text-blue-600 dark:text-blue-400 text-sm"></i>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 ring-1 ring-blue-200 dark:ring-blue-800/50">
+                <i class="fa-solid fa-landmark text-[9px]"></i> Academia
+              </span>
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider rounded-full bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 ring-1 ring-amber-200 dark:ring-amber-800/50">
+                <i class="fa-solid fa-briefcase text-[9px]"></i> Industry
+              </span>
+              <span class="text-xs font-medium text-slate-400 dark:text-slate-500">Sep 2018 &ndash; Dec 2021</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">AI & System Architect &mdash; Personal Allergy Tracer (PAT)</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">National-funded Project &middot; University of Patras</p>
+            <ul class="mt-3 space-y-1.5 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              <li class="flex gap-2"><span class="text-blue-500 mt-0.5">&bull;</span><span class="text-justify">Designed and built an end-to-end AI platform for Human Gesture Recognition using Deep Learning on wearable sensor data</span></li>
+              <li class="flex gap-2"><span class="text-blue-500 mt-0.5">&bull;</span><span class="text-justify">Pioneered a passive, non-invasive approach to allergic rhinitis detection via motion data from smartwatches</span></li>
+              <li class="flex gap-2"><span class="text-blue-500 mt-0.5">&bull;</span><span class="text-justify">Led a team of 3 engineers; published 3 conference papers on breakthrough gesture recognition results</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ── CTI — EU H2020 SAINT ──────────────────────────────── -->
+        <div class="timeline-item relative pl-12 reveal">
+          <div class="absolute left-0 top-1 w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center">
+            <i class="fa-solid fa-shield-halved text-blue-600 dark:text-blue-400 text-sm"></i>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 ring-1 ring-blue-200 dark:ring-blue-800/50">
+                <i class="fa-solid fa-landmark text-[9px]"></i> Academia
+              </span>
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider rounded-full bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 ring-1 ring-brand-200 dark:ring-brand-800/50">
+                EU H2020
+              </span>
+              <span class="text-xs font-medium text-slate-400 dark:text-slate-500">May 2017 &ndash; Apr 2019</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Research Engineer & Data Scientist &mdash; SAINT</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">EU H2020 Project &middot; CTI "Diophantus", Patras, GR</p>
+            <ul class="mt-3 space-y-1.5 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              <li class="flex gap-2"><span class="text-blue-500 mt-0.5">&bull;</span><span class="text-justify">Built a platform for crawling, scraping, and analyzing text from Twitter, Clearnet, and the Dark Web for early cyber-threat detection</span></li>
+              <li class="flex gap-2"><span class="text-blue-500 mt-0.5">&bull;</span><span class="text-justify">Implemented NLP cleansing, time-series analysis, and interactive web dashboards for cybersecurity intelligence</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ── Education ─────────────────────────────────────────── -->
+        <div class="mt-16 pt-10 border-t border-slate-200 dark:border-slate-800 reveal">
+          <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-8 text-center">Education</h3>
+          <div class="grid sm:grid-cols-3 gap-6">
+            <div class="text-center">
+              <div class="w-12 h-12 rounded-full bg-brand-100 dark:bg-brand-900/40 flex items-center justify-center mx-auto mb-3">
+                <i class="fa-solid fa-graduation-cap text-brand-600 dark:text-brand-400"></i>
+              </div>
+              <h4 class="font-bold text-slate-900 dark:text-white">Ph.D. in Computer Science</h4>
+              <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">University of Patras &middot; 2022</p>
+              <p class="text-xs text-slate-400 dark:text-slate-500 mt-1 italic">AIoT & Crowdsensing for Allergic Rhinitis</p>
+            </div>
+            <div class="text-center">
+              <div class="w-12 h-12 rounded-full bg-brand-100 dark:bg-brand-900/40 flex items-center justify-center mx-auto mb-3">
+                <i class="fa-solid fa-award text-brand-600 dark:text-brand-400"></i>
+              </div>
+              <h4 class="font-bold text-slate-900 dark:text-white">M.Sc. in Computer Science</h4>
+              <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">University of Patras &middot; 2018</p>
+              <p class="text-xs text-slate-400 dark:text-slate-500 mt-1 italic">Crowdsensing for Allergen Monitoring</p>
+            </div>
+            <div class="text-center">
+              <div class="w-12 h-12 rounded-full bg-brand-100 dark:bg-brand-900/40 flex items-center justify-center mx-auto mb-3">
+                <i class="fa-solid fa-scroll text-brand-600 dark:text-brand-400"></i>
+              </div>
+              <h4 class="font-bold text-slate-900 dark:text-white">Diploma (B.Sc.) in Computer Science</h4>
+              <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">University of Patras &middot; 2014</p>
+              <p class="text-xs text-slate-400 dark:text-slate-500 mt-1 italic">Social Computing & Networking</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- OPEN SOURCE & PROJECTS SECTION                                 -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <section id="projects" class="py-24 bg-slate-50 dark:bg-slate-900/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Open Source & <span class="text-gradient">Projects</span></h2>
+        <div class="mt-3 w-16 h-1 bg-brand-500 mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- CrossAI -->
+        <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-6 border border-slate-200 dark:border-slate-700/50 flex flex-col reveal">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-11 h-11 rounded-lg bg-brand-100 dark:bg-brand-900/40 flex items-center justify-center shrink-0">
+              <i class="fa-brands fa-python text-brand-600 dark:text-brand-400 text-lg"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 dark:text-white text-lg">CrossAI</h3>
+              <span class="text-xs font-medium text-brand-600 dark:text-brand-400 uppercase tracking-wider">Python Library</span>
+            </div>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify mb-4 flex-grow">
+            A Python library for building cutting-edge, end-to-end AI pipelines &mdash; covering Time-Series analysis, Human Activity &
+            Gesture Recognition, and Natural Language Processing. Includes state-of-the-art Neural Network architectures for
+            time-series classification and signal processing.
+          </p>
+          <div class="flex flex-wrap gap-1.5 mb-5">
+            <span class="px-2 py-0.5 text-[11px] font-medium bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 rounded">TensorFlow</span>
+            <span class="px-2 py-0.5 text-[11px] font-medium bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 rounded">scikit-learn</span>
+            <span class="px-2 py-0.5 text-[11px] font-medium bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 rounded">NumPy</span>
+            <span class="px-2 py-0.5 text-[11px] font-medium bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 rounded">Signal Processing</span>
+            <span class="px-2 py-0.5 text-[11px] font-medium bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 rounded">HAR</span>
+          </div>
+          <a href="https://github.com/tzamalisp/cross-ai-lib" target="_blank"
+             class="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors mt-auto">
+            <i class="fa-brands fa-github"></i> View on GitHub <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+
+        <!-- RLGen -->
+        <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-6 border border-slate-200 dark:border-slate-700/50 flex flex-col reveal">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-11 h-11 rounded-lg bg-emerald-100 dark:bg-emerald-900/40 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-scroll text-emerald-600 dark:text-emerald-400 text-lg"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 dark:text-white text-lg">RLGen</h3>
+              <span class="text-xs font-medium text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">GSoC 2019 &middot; JBoss / Red Hat</span>
+            </div>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify mb-4 flex-grow">
+            Release Notes Generation open-source tool built during Google Summer of Code 2019. Dynamically collects and processes
+            data from Jira and Bugzilla issue trackers, generating detailed AsciiDoc reports with release notes &mdash; on-demand or
+            event-triggered.
+          </p>
+          <div class="flex flex-wrap gap-1.5 mb-5">
+            <span class="px-2 py-0.5 text-[11px] font-medium bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 rounded">Python</span>
+            <span class="px-2 py-0.5 text-[11px] font-medium bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 rounded">Jira API</span>
+            <span class="px-2 py-0.5 text-[11px] font-medium bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 rounded">Bugzilla</span>
+            <span class="px-2 py-0.5 text-[11px] font-medium bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 rounded">AsciiDoc</span>
+            <span class="px-2 py-0.5 text-[11px] font-medium bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 rounded">GSoC</span>
+          </div>
+          <a href="https://github.com/tzamalisp/release-notes-generation-tool" target="_blank"
+             class="inline-flex items-center gap-2 text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors mt-auto">
+            <i class="fa-brands fa-github"></i> View on GitHub <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+
+        <!-- Educational Tutorials -->
+        <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-6 border border-slate-200 dark:border-slate-700/50 flex flex-col reveal">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-11 h-11 rounded-lg bg-amber-100 dark:bg-amber-900/40 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-book-open-reader text-amber-600 dark:text-amber-400 text-lg"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 dark:text-white text-lg">AI Tutorials</h3>
+              <span class="text-xs font-medium text-amber-600 dark:text-amber-400 uppercase tracking-wider">Educational Notebooks</span>
+            </div>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify mb-4 flex-grow">
+            A series of Jupyter Notebook tutorials covering Data Science, Machine Learning, and Deep Learning with Python 3.
+            Topics include data manipulation, statistical inference, visualization, classification, forecasting,
+            and end-to-end AI modelling.
+          </p>
+          <div class="flex flex-wrap gap-1.5 mb-5">
+            <span class="px-2 py-0.5 text-[11px] font-medium bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 rounded">Jupyter</span>
+            <span class="px-2 py-0.5 text-[11px] font-medium bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 rounded">TensorFlow</span>
+            <span class="px-2 py-0.5 text-[11px] font-medium bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 rounded">Pandas</span>
+            <span class="px-2 py-0.5 text-[11px] font-medium bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 rounded">Matplotlib</span>
+            <span class="px-2 py-0.5 text-[11px] font-medium bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300 rounded">scikit-learn</span>
+          </div>
+          <span class="inline-flex items-center gap-2 text-sm font-semibold text-amber-600 dark:text-amber-400 mt-auto">
+            <i class="fa-solid fa-laptop-code"></i> Notebook Collection
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- PUBLICATIONS SECTION                                           -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <section id="publications" class="py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight"><span class="text-gradient">Publications</span></h2>
+        <div class="mt-3 w-16 h-1 bg-brand-500 mx-auto rounded-full"></div>
+        <p class="mt-4 text-slate-500 dark:text-slate-400 max-w-xl mx-auto">Peer-reviewed contributions in AI, IoT, Digital Health, and Cybersecurity.</p>
+      </div>
+
+      <figure class="mb-14 max-w-4xl mx-auto px-0 sm:px-2 reveal">
+        <img src="assets/images/pub_talk_conference.png"
+             alt="Pantelis Tzamalis presenting at a conference; slide on data collection for AI systems (Marriott Marina del Rey)"
+             class="block w-full h-auto rounded-xl border border-slate-200 dark:border-slate-700/80 shadow-lg shadow-slate-200/50 dark:shadow-slate-950/50">
+        <figcaption class="mt-3 text-center text-sm text-slate-500 dark:text-slate-400">
+          Research presentation — AI-driven motion analysis and Explainable AI, DCOSS International Conference, Los Angeles, CA, USA, 2022.
+        </figcaption>
+      </figure>
+
+      <!-- ── Journals ──────────────────────────────────────────── -->
+      <div class="mb-14 reveal">
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-brand-600 dark:text-brand-400 mb-6 flex items-center gap-2">
+          <i class="fa-solid fa-book-open"></i> Journal Articles
+        </h3>
+        <div class="space-y-4">
+
+          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50">
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify">
+              <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong>, Papadopoulos, N. G., Akdis, C. A., Akdis, M., Damialis, A., Esposito, G., Fergadiotou, I., Goroncy, C., et al. (2024).
+              "Addressing adverse synergies between chemical and biological pollutants at schools &mdash; The 'SynAir-G' hypothesis."
+              <em class="text-slate-500 dark:text-slate-400">Allergy</em>, 79(2), 294&ndash;301.
+            </p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <a href="https://pubmed.ncbi.nlm.nih.gov/37654007/" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-lg hover:bg-brand-100 dark:hover:bg-brand-900/50 transition-colors">
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> PubMed
+              </a>
+              <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/all.15857" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-lg hover:bg-brand-100 dark:hover:bg-brand-900/50 transition-colors">
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Wiley
+              </a>
+            </div>
+          </div>
+
+          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50">
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify">
+              Kapetanidis, P., Kalioras, F., Tsakonas, C., <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong>, Kontogiannis, G., Karamanidou, T., Stavropoulos, T. G., & Nikoletseas, S. (2024).
+              "Respiratory Diseases Diagnosis Using Audio Analysis and Artificial Intelligence: A Systematic Review."
+              <em class="text-slate-500 dark:text-slate-400">Sensors</em>, 24(4), 1173.
+            </p>
+            <a href="https://www.mdpi.com/1424-8220/24/4/1173" target="_blank"
+               class="inline-flex items-center gap-1.5 mt-3 px-3.5 py-1.5 text-xs font-semibold bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-lg hover:bg-brand-100 dark:hover:bg-brand-900/50 transition-colors">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Read Paper
+            </a>
+          </div>
+
+          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50">
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify">
+              Vlachos, V., Stamatiou, Y. C., <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong>, & Nikoletseas, S. (2022).
+              "The SAINT observatory subsystem: an open-source intelligence tool for uncovering cybersecurity threats."
+              <em class="text-slate-500 dark:text-slate-400">International Journal of Information Security</em>, 21(5), 1091&ndash;1106.
+            </p>
+            <a href="https://link.springer.com/article/10.1007/s10207-022-00599-2" target="_blank"
+               class="inline-flex items-center gap-1.5 mt-3 px-3.5 py-1.5 text-xs font-semibold bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-lg hover:bg-brand-100 dark:hover:bg-brand-900/50 transition-colors">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Read Paper
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Conference Proceedings ─────────────────────────────── -->
+      <div class="reveal">
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-brand-600 dark:text-brand-400 mb-6 flex items-center gap-2">
+          <i class="fa-solid fa-users-rectangle"></i> International Conference Proceedings
+        </h3>
+        <div class="grid md:grid-cols-2 gap-4">
+
+          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50 flex flex-col">
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify flex-grow">
+              <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong>, Kontogiannis, G., &amp; Nikoletseas, S. (2024).
+              &ldquo;Exploring the Impact of Synthetic Data on Human Gesture Recognition Tasks Using GANs.&rdquo;
+              In <em class="text-slate-500 dark:text-slate-400">2024 20th International Conference on Distributed Computing in Smart Systems and the Internet of Things (DCOSS-IoT)</em>, pp. 384&ndash;391. IEEE.
+            </p>
+            <a href="https://ieeexplore.ieee.org/abstract/document/10621531" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-1.5 mt-3 px-3.5 py-1.5 text-xs font-semibold bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-lg hover:bg-brand-100 dark:hover:bg-brand-900/50 transition-colors w-fit">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Read Paper
+            </a>
+          </div>
+
+          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50 flex flex-col">
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify flex-grow">
+              <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong>, Nikoletseas, S., &amp; Spirakis, P. G. (2023).
+              &ldquo;GestureSet: Public Domain Dataset for Human Gesture Recognition using Wrist-worn Devices: A Preliminary Version.&rdquo;
+              In <em class="text-slate-500 dark:text-slate-400">2023 19th International Conference on Distributed Computing in Smart Systems and the Internet of Things (DCOSS-IoT)</em>, pp. 404&ndash;413. IEEE.
+            </p>
+            <a href="https://ieeexplore.ieee.org/document/10257296" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-1.5 mt-3 px-3.5 py-1.5 text-xs font-semibold bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-lg hover:bg-brand-100 dark:hover:bg-brand-900/50 transition-colors w-fit">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Read Paper
+            </a>
+          </div>
+
+          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50 flex flex-col">
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify flex-grow">
+              <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong>, Bardoutsos, A., Markantonatos, D., Raptopoulos, C., Nikoletseas, S., Aggelides, X., &amp; Papadopoulos, N. (2022).
+              &ldquo;End-to-end Gesture Recognition Framework for the Identification of Allergic Rhinitis Symptoms.&rdquo;
+              In <em class="text-slate-500 dark:text-slate-400">2022 18th International Conference on Distributed Computing in Sensor Systems (DCOSS)</em>, pp. 25&ndash;34. IEEE.
+            </p>
+            <a href="https://ieeexplore.ieee.org/document/9881698" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-1.5 mt-3 px-3.5 py-1.5 text-xs font-semibold bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-lg hover:bg-brand-100 dark:hover:bg-brand-900/50 transition-colors w-fit">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Read Paper
+            </a>
+          </div>
+
+          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50 flex flex-col">
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify flex-grow">
+              <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong>, Bardoutsos, A., Matzarapis, G., Nikoletseas, S., &amp; Spirakis, P. G. (2021).
+              &ldquo;A Complementary Sensing Platform for a holistic approach to Allergic Rhinitis monitoring.&rdquo;
+              In <em class="text-slate-500 dark:text-slate-400">2021 17th International Conference on Distributed Computing in Sensor Systems (DCOSS)</em>, pp. 171&ndash;180. IEEE.
+            </p>
+            <a href="https://ieeexplore.ieee.org/document/9600063" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-1.5 mt-3 px-3.5 py-1.5 text-xs font-semibold bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-lg hover:bg-brand-100 dark:hover:bg-brand-900/50 transition-colors w-fit">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Read Paper
+            </a>
+          </div>
+
+          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50 flex flex-col">
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify flex-grow">
+              <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong>, Bardoutsos, A., Markantonatos, D., Nikoletseas, S., &amp; Spirakis, P. G. (2021).
+              &ldquo;A human-centered Web-based tool for the effective real-time motion data collection and annotation from BLE IoT devices.&rdquo;
+              In <em class="text-slate-500 dark:text-slate-400">2021 17th International Conference on Distributed Computing in Sensor Systems (DCOSS)</em>, pp. 380&ndash;389. IEEE.
+            </p>
+            <a href="https://ieeexplore.ieee.org/document/9599889" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-1.5 mt-3 px-3.5 py-1.5 text-xs font-semibold bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-lg hover:bg-brand-100 dark:hover:bg-brand-900/50 transition-colors w-fit">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Read Paper
+            </a>
+          </div>
+
+          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50 flex flex-col">
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify flex-grow">
+              <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong>, Bothos, I., Vlachos, V., Kyriazanos, D. M., Stamatiou, I., Thanos, K. G., Nikoletseas, S., &amp; Thomopoulos, S. C. A. (2021).
+              &ldquo;Modelling Cyber-Risk in an Economic Perspective.&rdquo;
+              In <em class="text-slate-500 dark:text-slate-400">2021 IEEE International Conference on Cyber Security and Resilience (CSR)</em>, pp. 372&ndash;377. IEEE.
+            </p>
+            <a href="https://ieeexplore.ieee.org/document/9527994" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-1.5 mt-3 px-3.5 py-1.5 text-xs font-semibold bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-lg hover:bg-brand-100 dark:hover:bg-brand-900/50 transition-colors w-fit">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Read Paper
+            </a>
+          </div>
+
+          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50 flex flex-col">
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify flex-grow">
+              <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong>, Bardoutsos, A., Filios, G., Katsidimas, I., Krousarlis, T., &amp; Nikoletseas, S. (2020).
+              &ldquo;A multidimensional human-centric framework for environmental intelligence: Air pollution and noise in smart cities.&rdquo;
+              In <em class="text-slate-500 dark:text-slate-400">2020 16th International Conference on Distributed Computing in Sensor Systems (DCOSS)</em>, pp. 155&ndash;164. IEEE.
+            </p>
+            <a href="https://ieeexplore.ieee.org/document/9183628" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-1.5 mt-3 px-3.5 py-1.5 text-xs font-semibold bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-lg hover:bg-brand-100 dark:hover:bg-brand-900/50 transition-colors w-fit">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Read Paper
+            </a>
+          </div>
+
+          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50 flex flex-col">
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify flex-grow">
+              <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong>, Aggelides, X., Bardoutsos, A., Nikoletseas, S., Papadopoulos, N., &amp; Raptopoulos, C. (2020).
+              &ldquo;A Gesture Recognition approach to classifying Allergic Rhinitis gestures using Wrist-worn Devices: a multidisciplinary case study.&rdquo;
+              In <em class="text-slate-500 dark:text-slate-400">2020 16th International Conference on Distributed Computing in Sensor Systems (DCOSS)</em>, pp. 1&ndash;10. IEEE.
+            </p>
+            <a href="https://ieeexplore.ieee.org/document/9183416" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-1.5 mt-3 px-3.5 py-1.5 text-xs font-semibold bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-lg hover:bg-brand-100 dark:hover:bg-brand-900/50 transition-colors w-fit">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Read Paper
+            </a>
+          </div>
+
+          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50 flex flex-col">
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify flex-grow">
+              <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong>, Vikatos, P., &amp; Nikoletseas, S. (2019).
+              &ldquo;A Hybridization of Mobile Crowdsensing, Twitter Analytics, and Sensor Data for the Holistic Approach of Pollen onsets Detection.&rdquo;
+              In <em class="text-slate-500 dark:text-slate-400">2019 15th International Conference on Distributed Computing in Sensor Systems (DCOSS)</em>, pp. 188&ndash;191. IEEE.
+            </p>
+            <a href="https://ieeexplore.ieee.org/document/8804479" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-1.5 mt-3 px-3.5 py-1.5 text-xs font-semibold bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-lg hover:bg-brand-100 dark:hover:bg-brand-900/50 transition-colors w-fit">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Read Paper
+            </a>
+          </div>
+
+          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50 flex flex-col">
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify flex-grow">
+              <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong>, Vlachos, V., Stamatiou, Y. C., Nikoletseas, S., &amp; Chantzi, K. (2019).
+              &ldquo;A Social Network Analysis Tool for Uncovering Cybersecurity Threats.&rdquo;
+              In <em class="text-slate-500 dark:text-slate-400">6th International Symposium for ICS &amp; SCADA Cyber Security Research</em>, pp. 97&ndash;106.
+            </p>
+            <a href="https://www.scienceopen.com/hosted-document?doi=10.14236/ewic/icscsr19.13" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-1.5 mt-3 px-3.5 py-1.5 text-xs font-semibold bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-lg hover:bg-brand-100 dark:hover:bg-brand-900/50 transition-colors w-fit">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Read Paper
+            </a>
+          </div>
+
+          <div class="pub-card bg-white dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700/50 flex flex-col">
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed text-justify flex-grow">
+              <strong class="text-slate-900 dark:text-white">Tzamalis, P.</strong>, Kalogiros, L. A., Lagouvardos, K., Nikoletseas, S., &amp; Papadopoulos, N. (2018).
+              &ldquo;Allergymap: a hybrid mHealth mobile crowdsensing system for allergic diseases epidemiology: a multidisciplinary case study.&rdquo;
+              In <em class="text-slate-500 dark:text-slate-400">2018 IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops)</em>, pp. 597&ndash;602. IEEE.
+            </p>
+            <a href="https://ieeexplore.ieee.org/document/8480280" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-1.5 mt-3 px-3.5 py-1.5 text-xs font-semibold bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-lg hover:bg-brand-100 dark:hover:bg-brand-900/50 transition-colors w-fit">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Read Paper
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- NEWS SECTION                                                   -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <section id="news" class="py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-16 reveal">
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Latest <span class="text-gradient">News</span></h2>
+        <div class="mt-3 w-16 h-1 bg-brand-500 mx-auto rounded-full"></div>
+      </div>
+
+      <div class="space-y-8">
+        <!-- News: CTO Iassis -->
+        <article class="reveal bg-white dark:bg-slate-800/60 rounded-xl p-6 border border-slate-200 dark:border-slate-700/50">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 text-xs font-semibold bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 rounded-full">
+              <i class="fa-solid fa-briefcase text-[10px]"></i> Leadership
+            </span>
+            <time class="text-sm text-slate-400 dark:text-slate-500" datetime="2025-09-01">September 2025</time>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Chief Technology Officer, Iassis Medical Group</h3>
+          <p class="mt-2 text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
+            I took on the role of Chief Technology Officer at Iassis Medical Group, leading IT services and products at scale across web platforms, DevOps, cloud computing, data engineering, data analysis, and machine learning and AI for customers, clinical staff, and operations.
+          </p>
+        </article>
+
+        <!-- News: Pfizer CDI EyeAI -->
+        <article class="reveal bg-white dark:bg-slate-800/60 rounded-xl p-6 border border-slate-200 dark:border-slate-700/50">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 text-xs font-semibold bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-full">
+              <i class="fa-solid fa-handshake text-[10px]"></i> Collaboration
+            </span>
+            <time class="text-sm text-slate-400 dark:text-slate-500" datetime="2025-01-01">January 2025</time>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">New collaboration with Pfizer CDI</h3>
+          <p class="mt-2 text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
+            New direct contract with Pfizer Center for Digital Innovation (Pfizer CDI) through the University of Patras: tech lead and AI architecture for a web-based tool for collection and annotation of eye images related to jaundice, with an on-device AI service for sclera segmentation from smartphone cameras. Further project details remain confidential per client requirements.
+          </p>
+        </article>
+
+        <!-- News: SynAir-G Task Leader -->
+        <article class="reveal bg-white dark:bg-slate-800/60 rounded-xl p-6 border border-slate-200 dark:border-slate-700/50">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 text-xs font-semibold bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-full">
+              <i class="fa-solid fa-earth-europe text-[10px]"></i> EU Project
+            </span>
+            <time class="text-sm text-slate-400 dark:text-slate-500" datetime="2022-09-01">September 2022</time>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Task Leader, EU Horizon Europe SynAir-G</h3>
+          <p class="mt-2 text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
+            I serve as Task Leader for AI modelling in the Horizon Europe project SynAir-G (&ldquo;Disrupting Noxious Synergies of Indoor Air Pollutants and their Impact in Childhood Health and Wellbeing, using Advanced Intelligent Multisensing and Green Interventions&rdquo;), coordinating partners on data, modelling, explainable AI, and causation-oriented analysis for indoor air and health.
+          </p>
+          <p class="mt-3 text-sm">
+            <a href="https://cordis.europa.eu/project/id/101057271" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-brand-600 dark:text-brand-400 hover:underline font-medium">
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> CORDIS project page (101057271)
+            </a>
+          </p>
+        </article>
+
+        <!-- News Item: Pfizer VBD 2022 -->
+        <article class="reveal bg-white dark:bg-slate-800/60 rounded-xl p-6 border border-slate-200 dark:border-slate-700/50">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 text-xs font-semibold bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-full">
+              <i class="fa-solid fa-star text-[10px]"></i> Collaboration
+            </span>
+            <time class="text-sm text-slate-400 dark:text-slate-500" datetime="2022-06-02">June 2, 2022</time>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Collaboration with Pfizer CDI</h3>
+          <p class="mt-2 text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
+            New collaboration of our team and IoT Lab with Pfizer Center for Digital Innovation on the "Voice-Based Diagnostics
+            using smartphone devices and AI" research project.
+          </p>
+        </article>
+
+        <!-- News Item 2 -->
+        <article class="reveal bg-white dark:bg-slate-800/60 rounded-xl p-6 border border-slate-200 dark:border-slate-700/50">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 text-xs font-semibold bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full">
+              <i class="fa-solid fa-microphone text-[10px]"></i> Invited Talk
+            </span>
+            <time class="text-sm text-slate-400 dark:text-slate-500" datetime="2021-11-15">November 15, 2021</time>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Invited Talk at ITU's Digital Transformation Webinar Series</h3>
+          <p class="mt-2 text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
+            Presented at the International Telecommunication Union (ITU) webinar series on Digital transformation for cities
+            and communities. The talk, <em>"Exploiting the Power of the Crowd for the efficient monitoring of diseases exacerbation"</em>,
+            covered how AI and IoT technologies merged to provide Healthcare 5.0 solutions for disease monitoring.
+          </p>
+          <div class="mt-4">
+            <img src="assets/images/news/itu_webinar_2021.png" alt="ITU Webinar 2021" class="block mx-auto rounded-lg w-full max-w-lg">
+          </div>
+          <div class="mt-4 flex flex-wrap gap-3 text-sm">
+            <a href="https://www.itu.int/en/ITU-T/webinars/20211102/Documents/Tzamalis_Pantelis.pdf" target="_blank"
+               class="inline-flex items-center gap-1.5 text-brand-600 dark:text-brand-400 hover:underline">
+              <i class="fa-solid fa-file-pdf"></i> Presentation PDF
+            </a>
+            <a href="https://www.youtube.com/watch?v=Zz8i-XCS0iU" target="_blank"
+               class="inline-flex items-center gap-1.5 text-brand-600 dark:text-brand-400 hover:underline">
+              <i class="fa-brands fa-youtube"></i> Watch Video
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- VIDEOS SECTION                                                 -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <section id="videos" class="py-24 bg-slate-50 dark:bg-slate-900/50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Featured <span class="text-gradient">Video</span></h2>
+        <div class="mt-3 w-16 h-1 bg-brand-500 mx-auto rounded-full"></div>
+      </div>
+
+      <div class="reveal">
+        <div class="relative w-full rounded-xl overflow-hidden shadow-2xl" style="padding-bottom: 56.25%;">
+          <iframe class="absolute top-0 left-0 w-full h-full"
+                  src="https://www.youtube.com/embed/Zz8i-XCS0iU"
+                  title="Pantelis Tzamalis — Digital Healthcare on ITU Webinar (Nov 2021)"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+          </iframe>
+        </div>
+        <p class="mt-4 text-center text-sm text-slate-500 dark:text-slate-400">
+          ITU Digital Transformation Webinar Series — November 2021
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- CONTACT / FOOTER                                               -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <section id="contact" class="py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Get in <span class="text-gradient">Touch</span></h2>
+        <div class="mt-3 w-16 h-1 bg-brand-500 mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 reveal">
+        <!-- Contact Info -->
+        <div class="bg-white dark:bg-slate-800/60 rounded-xl p-6 border border-slate-200 dark:border-slate-700/50">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center">
+              <i class="fa-solid fa-location-dot text-brand-600 dark:text-brand-400"></i>
+            </div>
+            <h3 class="font-semibold text-slate-900 dark:text-white">Office</h3>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            Computer Engineering and Informatics Department<br>
+            University of Patras, Greece<br>
+            25is Martiou 7, Kato Kastritsi 265 04
+          </p>
+        </div>
+
+        <!-- Email & Phone -->
+        <div class="bg-white dark:bg-slate-800/60 rounded-xl p-6 border border-slate-200 dark:border-slate-700/50">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center">
+              <i class="fa-solid fa-envelope text-brand-600 dark:text-brand-400"></i>
+            </div>
+            <h3 class="font-semibold text-slate-900 dark:text-white">Contact</h3>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            <a href="mailto:tzamalis@ceid.upatras.gr" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">tzamalis@ceid.upatras.gr</a><br>
+            (+30) 2610 996 964
+          </p>
+        </div>
+
+        <!-- Social -->
+        <div class="bg-white dark:bg-slate-800/60 rounded-xl p-6 border border-slate-200 dark:border-slate-700/50">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center">
+              <i class="fa-solid fa-share-nodes text-brand-600 dark:text-brand-400"></i>
+            </div>
+            <h3 class="font-semibold text-slate-900 dark:text-white">Social</h3>
+          </div>
+          <div class="flex items-center gap-4 text-xl">
+            <a href="https://github.com/tzamalisp" target="_blank" aria-label="GitHub"
+               class="text-slate-400 hover:text-slate-700 dark:hover:text-white transition-colors"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/pantelis-tzamalis/" target="_blank" aria-label="LinkedIn"
+               class="text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://scholar.google.gr/citations?user=zo_G-TIAAAAJ&hl=en" target="_blank" aria-label="Google Scholar"
+               class="text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors"><i class="ai ai-google-scholar"></i></a>
+            <a href="https://www.researchgate.net/profile/Pantelis-Tzamalis" target="_blank" aria-label="ResearchGate"
+               class="text-slate-400 hover:text-green-600 dark:hover:text-green-400 transition-colors"><i class="ai ai-researchgate"></i></a>
+            <a href="https://twitter.com/tzamalisp" target="_blank" aria-label="X / Twitter"
+               class="text-slate-400 hover:text-slate-700 dark:hover:text-white transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="mt-12 reveal">
+        <div class="rounded-xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-700/50">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12526.152748391438!2d21.7956693!3d38.2901968!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb6bb043c29ce2b46!2sDepartment%20of%20Computer%20Engineering%20and%20Informatics%2C%20School%20of%20Engineering%2C%20University%20of%20Patras!5e0!3m2!1sen!2sgr!4v1675540376926!5m2!1sen!2sgr"
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            class="w-full">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- FOOTER BAR                                                     -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <footer class="py-8 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-slate-400 dark:text-slate-500">
+        &copy; 2026 Pantelis Tzamalis &middot; Patras, Greece
+      </p>
+      <p class="text-sm text-slate-400 dark:text-slate-500">
+        Ph.D. &middot; CTO &middot; AI &amp; System Architect
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Mobile theme toggle (shares logic with desktop) -->
+  <script>
+    const mobileToggle = document.getElementById('theme-toggle-mobile');
+    if (mobileToggle) {
+      mobileToggle.addEventListener('click', () => {
+        document.getElementById('theme-toggle').click();
+      });
+    }
+  </script>
 </body>
 </html>
