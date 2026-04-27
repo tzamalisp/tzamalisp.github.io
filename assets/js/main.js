@@ -42,12 +42,22 @@
   if (menuBtn && mobileMenu) {
     menuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      // When the dropdown is open, force the navbar to its solid (frosted)
+      // background so menu items aren't see-through over the hero content.
+      // When it's closed again, restore the background based on scroll position.
+      if (isOpen) {
+        navbar?.classList.add('nav-scrolled');
+      } else {
+        updateNavbar();
+      }
     });
 
     // Close mobile menu when a link is clicked
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
+        updateNavbar();
       });
     });
   }

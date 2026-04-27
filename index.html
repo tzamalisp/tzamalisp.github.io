@@ -59,13 +59,24 @@
 
   <style>
     /* Navbar glassmorphism */
+    /* Navbar solid background — used when scrolled OR when the mobile menu
+       is open. Plain CSS (not @apply) so it works with the Tailwind Play CDN. */
     .nav-scrolled {
-      @apply bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg shadow-lg;
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    }
+    html.dark .nav-scrolled {
+      background-color: rgba(15, 23, 42, 0.95); /* slate-900 */
     }
 
     /* Active nav link indicator */
     .nav-active {
-      @apply text-brand-600 dark:text-brand-400;
+      color: #4f46e5; /* brand-600 */
+    }
+    html.dark .nav-active {
+      color: #818cf8; /* brand-400 */
     }
 
     /* Scroll reveal */
